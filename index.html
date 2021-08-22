@@ -11,9 +11,9 @@
 
     <!-- OWL SLIDER START -->
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     
     <!-- OWL SLIDER END -->
 
@@ -117,55 +117,53 @@
     
     <section class="slider">
         <div class="bodycontainer">
-            <div class="owl-carousel owl-theme">
-                <div class="item"><img src="assets/sliderimg-1.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-2.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-3.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-4.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-5.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-6.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-7.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-1.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-2.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-3.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-4.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-5.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-6.png" alt=""></div>
-                <div class="item"><img src="assets/sliderimg-7.png" alt=""></div>
+            <div class="wrapper">
+                <div class="carousel owl-carousel">
+                    <div class="card"><img src="assets/sliderimg-1.png" alt="Slider Image - 1"></div>
+                    <div class="card"><img src="assets/sliderimg-2.png" alt="Slider Image - 2"></div>
+                    <div class="card"><img src="assets/sliderimg-3.png" alt="Slider Image - 3"></div>
+                    <div class="card"><img src="assets/sliderimg-4.png" alt="Slider Image - 4"></div>
+                    <div class="card"><img src="assets/sliderimg-5.png" alt="Slider Image - 5"></div>
+                    <div class="card"><img src="assets/sliderimg-6.png" alt="Slider Image - 6"></div>
+                    <div class="card"><img src="assets/sliderimg-7.png" alt="Slider Image - 7"></div>
+                    <div class="card"><img src="assets/sliderimg-1.png" alt="Slider Image - 8"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="new-products">
-        <div class="new-product-title">
-            <h2>new <span class="color-change">products</span></h2>
-        </div>
-
-        <div class="product-section">
-            <div class="product">
-                
-            </div>
-        </div>
-    </section>
 
     <!-- OWL SLIDER START -->
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script>
-            
-            var owl = $('.owl-carousel');
-            owl.owlCarousel({
-                autoplayTimeout: 1300,
-                items:4,
-                loop:true,
-                margin:10,
-                autoplay:true,
-                autoplayHoverPause:true
+            $(".carousel").owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0:{
+                        items: 1,
+                        nav: false
+                    },
+                    481:{
+                        items: 2,
+                        nav: false
+                    },
+                    670:{
+                        items: 3,
+                        nav: false
+                    },
+                    1025:{
+                        items: 4,
+                        nav: false
+                    },
+                    1201:{
+                        items: 5,
+                        nav: false
+                    }
+                }
             });
-    
         </script>
 
     <!-- OWL SLIDER END -->

@@ -18,6 +18,21 @@ a{
 .color-change{
     color: #cea45f;
 }
+
+/* Style Scrool Bar */
+
+::-webkit-scrollbar{
+    width: 11px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to top, #cea45f, #eeb965);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track{
+    background: #333;
+    border-radius: 5px;
+}
+
 .container{
     width: 1200px;
     margin: 0 auto;
@@ -200,12 +215,58 @@ header .header-bottom .navbar li a{
 header .header-bottom .navbar li a:hover{
     color: #cea45f;
 }
+
+/* Slider Section Style */
+
+.bodycontainer{
+    width: 1168px;
+    margin: 0 auto;
+    z-index: 0;
+    overflow: visible;
+}
 .slider{
     width: 100%;
+    display: flex;
+    min-height: 100vh;
+    
+}
+.slider .wrapper{
+    width: 100%;
+}
+.slider .wrapper .carousel{
+    max-width: 1500px;
+    margin: auto;
+}
+.slider .wrapper .carousel .card{
+    margin: 20px 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 270px;
+    height: 243px;
+    overflow: hidden;
+}
+.slider .wrapper .carousel .card img{
+    width: 270px;
     height: auto;
 }
-.slider .owl-carousel{
-    padding: 20px 0;
-    overflow: visible;
-    z-index: 0;
+.slider .wrapper .owl-dots{
+    text-align: center;
+    margin-top: 10px;
+}
+.slider .wrapper .owl-dot{
+    height: 15px;
+    width: 25px;
+    border: 2px solid #cea45f !important;
+    cursor: pointer;
+    outline: none;
+    border-radius: 25px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.slider .wrapper .owl-dot:hover{
+    background: #cea45f;
+}
+.slider .wrapper .owl-dot.active{
+    width: 45px;
+    background: #cea45f;
 }

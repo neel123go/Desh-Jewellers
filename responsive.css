@@ -77,6 +77,21 @@
         margin: 0 auto;
         display: block;
     }
+    .bodycontainer{
+        width: 100%;
+        padding: 0 0px;
+        margin: 0 auto;
+    }
+    .slider .wrapper .carousel .card{
+        margin: 10px 10px;
+        width: 290px;
+        height: 260px;
+        margin: 20px auto;
+    }
+    .slider .wrapper .carousel .card img{
+        width: 290px;
+        height: auto;
+    }
 }
 
 
@@ -160,6 +175,21 @@
         margin: 0 auto;
         display: block;
     }
+    .bodycontainer{
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    .slider .wrapper .carousel .card{
+        margin: 20px 10px;
+        width: 190px;
+        height: 170px;
+        margin: 30px auto;
+    }
+    .slider .wrapper .carousel .card img{
+        width: 190px;
+        height: auto;
+    }
 }
 
 
@@ -228,6 +258,21 @@
     }
     header .header-bottom .navbar li a{
         font-size: 14px;
+    }
+    .bodycontainer{
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    .slider .wrapper .carousel .card{
+        margin: 20px 10px;
+        width: 220px;
+        height: 199px;
+        margin: 30px auto;
+    }
+    .slider .wrapper .carousel .card img{
+        width: 220px;
+        height: auto;
     }
 }
 
@@ -304,6 +349,21 @@
     header .header-bottom .navbar li a{
         font-size: 14px;
     }
+    .bodycontainer{
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    .slider .wrapper .carousel .card{
+        margin: 20px 10px;
+        width: 220px;
+        height: 199px;
+        margin: 30px auto;
+    }
+    .slider .wrapper .carousel .card img{
+        width: 220px;
+        height: auto;
+    }
 }
 
 
@@ -377,6 +437,21 @@
     header .header-bottom .navbar li a{
         font-size: 15px;
     }
+    .bodycontainer{
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    .slider .wrapper .carousel .card{
+        margin: 20px 10px;
+        width: 250px;
+        height: 199px;
+        margin: 30px auto;
+    }
+    .slider .wrapper .carousel .card img{
+        width: 250px;
+        height: auto;
+    }
 }
 
 
@@ -448,6 +523,21 @@
     }
     header .header-bottom .navbar li a{
         font-size: 16px;
+    }
+    .bodycontainer{
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    .slider .wrapper .carousel .card{
+        margin: 20px 10px;
+        width: 220px;
+        height: 199px;
+        margin: 30px auto;
+    }
+    .slider .wrapper .carousel .card img{
+        width: 220px;
+        height: auto;
     }
 }
 
@@ -521,6 +611,21 @@
     header .header-bottom .navbar li a{
         font-size: 16px;
     }
+    .bodycontainer{
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    .slider .wrapper .carousel .card{
+        margin: 20px 10px;
+        width: 240px;
+        height: 199px;
+        margin: 30px auto;
+    }
+    .slider .wrapper .carousel .card img{
+        width: 240px;
+        height: auto;
+    }
 }
 
 
@@ -592,6 +697,21 @@
     header .header-bottom .navbar li a{
         font-size: 16px;
     }
+    .bodycontainer{
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    .slider .wrapper .carousel .card{
+        margin: 20px 10px;
+        width: 220px;
+        height: 199px;
+        margin: 30px auto;
+    }
+    .slider .wrapper .carousel .card img{
+        width: 220px;
+        height: auto;
+    }
 }
 
 @media (min-width: 1301px) and (max-width: 1500px){
@@ -630,5 +750,20 @@
     }
     header .header-bottom .navbar li a{
         font-size: 16px;
+    }
+    .bodycontainer{
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    .slider .wrapper .carousel .card{
+        margin: 20px 10px;
+        width: 230px;
+        height: 199px;
+        margin: 30px auto;
+    }
+    .slider .wrapper .carousel .card img{
+        width: 230px;
+        height: auto;
     }
 }
