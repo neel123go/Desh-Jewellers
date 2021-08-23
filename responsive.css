@@ -41,13 +41,13 @@
         margin-right: 10px;
     }
     .header .header-top .icon {
-        width: 205px;
+        width: 260px;
         height: 70px;
         align-items: center;
         margin: 0 auto;
     }
     .header .header-top .icon .wishlist{
-        margin-right: 30px;
+        margin-right: 10px;
     }
     .header .header-top .icon .wishlist i{
         font-size: 30px;
@@ -57,10 +57,21 @@
         font-size: 15px;
         color: rgba(44, 44, 44, 0.822);
     }
+    .header .header-top .icon .cart{
+        margin-right: 40px;
+    }
     .header .header-top .icon .cart img{
         width: 34px;
-        color: rgba(68, 67, 67, 0.849);
     }
+    .header .header-top .icon .login img{
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    .header .header-top .icon .login p{
+        display: none;
+    }
+    
     .container{
         width: 295px;
     }
@@ -139,7 +150,7 @@
         margin-right: 10px;
     }
     .header .header-top .icon {
-        width: 205px;
+        width: 440px;
         height: 70px;
         align-items: center;
         margin: 0 auto;
@@ -155,9 +166,20 @@
         font-size: 15px;
         color: rgba(44, 44, 44, 0.822);
     }
+    .header .header-top .icon .cart{
+        margin-right: 200px;
+    }
     .header .header-top .icon .cart img{
         width: 34px;
         color: rgba(68, 67, 67, 0.849);
+    }
+    .header .header-top .icon .login img{
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    .header .header-top .icon .login p{
+        display: none;
     }
     .container{
         width: 450px;
@@ -197,26 +219,26 @@
 @media (min-width: 769px) and (max-width: 810px){
     header{
         width: 100%;
-        height: 115px;
+        height: 124px;
     }
     .header .header-top{
-        padding: 15px 30px;
+        padding: 20px 30px;
     }
     .header .header-top .logo{
-        width: 228px;
+        width: 202px;
     }
     .header .header-top .logo img{
         width: 30px;
         height: 30px;
-        margin-right: 10px;
+        margin-right: 5px;
     }
     .header .header-top .logo h1{
-        font-size: 26px;
+        font-size: 23px;
         font-weight: 600;
     }
     .header .header-top .search-area input{
-        width: 230px;
-        padding: 20px 10px;
+        width: 260px;
+        padding: 20px 5px;
         padding-right: 40px;
     }
     .header .header-top .search-area i{
@@ -224,14 +246,25 @@
         margin-left: -30px;
         color: rgba(68, 67, 67, 0.644);
     }
-    .header .header-top .icon .wishlist{
-        margin-right: 20px;
+    .header .header-top .icon .wishlist, .cart{
+        margin-right: 15px;
     }
     .header .header-top .icon .wishlist i{
-        font-size: 28px;
+        font-size: 26px;
+    }
+    .header .header-top .icon .cart{
+        margin-right: 15px;
     }
     .header .header-top .icon .cart img{
-        width: 30px;
+        width: 29px;
+    }
+    .header .header-top .icon .login img{
+        display: block;
+        width: 25px;
+        height: 25px;
+    }
+    .header .header-top .icon .login p{
+        display: none;
     }
     .container{
         width: auto;
@@ -281,26 +314,25 @@
 @media (min-width: 811px) and (max-width: 910px){
     header{
         width: 100%;
-        height: 115px;
+        height: 124px;
     }
     .header .header-top{
-        padding: 15px 30px;
+        padding: 20px 30px;
     }
     .header .header-top .logo{
-        width: 243px;
+        width: 231px;
     }
     .header .header-top .logo img{
         width: 30px;
         height: 30px;
-        margin-right: 10px;
+        margin-right: 5px;
     }
     .header .header-top .logo h1{
-        font-size: 28px;
+        font-size: 27px;
         font-weight: 600;
     }
     .header .header-top .search-area input{
-        width: 280px;
-        height: 30px;
+        width: 270px;
         padding: 20px 10px;
         padding-right: 40px;
     }
@@ -309,14 +341,25 @@
         margin-left: -30px;
         color: rgba(68, 67, 67, 0.644);
     }
-    .header .header-top .icon .wishlist{
-        margin-right: 20px;
+    .header .header-top .icon .wishlist, .cart{
+        margin-right: 15px;
     }
     .header .header-top .icon .wishlist i{
-        font-size: 28px;
+        font-size: 24px;
+    }
+    .header .header-top .icon .cart{
+        margin-right: 15px;
     }
     .header .header-top .icon .cart img{
-        width: 30px;
+        width: 27px;
+    }
+    .header .header-top .icon .login img{
+        display: block;
+        width: 25px;
+        height: 25px;
+    }
+    .header .header-top .icon .login p{
+        display: none;
     }
 
 
@@ -371,41 +414,47 @@
 @media (min-width: 911px) and (max-width: 1024px){
     header{
         width: 100%;
-        height: 114px;
+        height: 124px;
     }
     .header .header-top{
-        padding: 15px 30px;
+        padding: 20px 30px;
     }
     .header .header-top .logo{
-        width: 277px;
+        width: 239px;
     }
     .header .header-top .logo img{
-        width: 35px;
-        height: 35px;
+        width: 33px;
+        height: 33px;
         margin-right: 10px;
     }
     .header .header-top .logo h1{
-        font-size: 32px;
+        font-size: 27px;
         font-weight: 600;
     }
     .header .header-top .search-area input{
-        width: 340px;
+        width: 270px;
         padding: 20px 10px;
         padding-right: 40px;
     }
     .header .header-top .search-area i{
-        font-size: 20px;
+        font-size: 23px;
         margin-left: -30px;
         color: rgba(68, 67, 67, 0.644);
     }
-    .header .header-top .icon .wishlist{
-        margin-right: 20px;
+    .header .header-top .icon .wishlist, .cart{
+        margin-right: 15px;
     }
     .header .header-top .icon .wishlist i{
-        font-size: 30px;
+        font-size: 27px;
+    }
+    .header .header-top .icon .cart{
+        margin-right: 15px;
     }
     .header .header-top .icon .cart img{
-        width: 32px;
+        width: 30px;
+    }
+    .header .header-top .icon .login p{
+        font-size: 18px;
     }
 
     .container{
@@ -464,36 +513,41 @@
         padding: 40px 60px;
     }
     .header .header-top .logo{
-        width: 277px;
+        width: 239px;
     }
     .header .header-top .logo img{
-        width: 35px;
-        height: 35px;
+        width: 33px;
+        height: 33px;
         margin-right: 10px;
     }
     .header .header-top .logo h1{
-        font-size: 32px;
+        font-size: 27px;
         font-weight: 600;
     }
     .header .header-top .search-area input{
-        width: 380px;
-        height: 30px;
-        padding: 20px 20px;
-        padding-right: 50px;
+        width: 310px;
+        padding: 20px 10px;
+        padding-right: 40px;
     }
     .header .header-top .search-area i{
-        font-size: 20px;
+        font-size: 23px;
         margin-left: -30px;
         color: rgba(68, 67, 67, 0.644);
     }
-    .header .header-top .icon .wishlist{
-        margin-right: 20px;
+    .header .header-top .icon .wishlist, .cart{
+        margin-right: 15px;
     }
     .header .header-top .icon .wishlist i{
-        font-size: 33px;
+        font-size: 27px;
+    }
+    .header .header-top .icon .cart{
+        margin-right: 15px;
     }
     .header .header-top .icon .cart img{
-        width: 37px;
+        width: 30px;
+    }
+    .header .header-top .icon .login p{
+        font-size: 18px;
     }
     .container{
         width: auto;
@@ -552,35 +606,41 @@
         padding: 40px 75px;
     }
     .header .header-top .logo{
-        width: 287px;
+        width: 253px;
     }
     .header .header-top .logo img{
-        width: 38px;
-        height: 38px;
+        width: 33px;
+        height: 33px;
         margin-right: 10px;
     }
     .header .header-top .logo h1{
-        font-size: 33px;
+        font-size: 29px;
         font-weight: 600;
     }
     .header .header-top .search-area input{
-        width: 420px;
-        padding: 20px 20px;
+        width: 310px;
+        padding: 20px 10px;
         padding-right: 40px;
     }
     .header .header-top .search-area i{
-        font-size: 25px;
+        font-size: 23px;
         margin-left: -30px;
         color: rgba(68, 67, 67, 0.644);
     }
-    .header .header-top .icon .wishlist{
-        margin-right: 20px;
+    .header .header-top .icon .wishlist, .cart{
+        margin-right: 15px;
     }
     .header .header-top .icon .wishlist i{
-        font-size: 36px;
+        font-size: 27px;
+    }
+    .header .header-top .icon .cart{
+        margin-right: 15px;
     }
     .header .header-top .icon .cart img{
-        width: 40px;
+        width: 30px;
+    }
+    .header .header-top .icon .login p{
+        font-size: 18px;
     }
     .container{
         width: auto;
@@ -641,16 +701,16 @@
         width: 303px;
     }
     .header .header-top .logo img{
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         margin-right: 10px;
     }
     .header .header-top .logo h1{
-        font-size: 35px;
+        font-size: 33px;
         font-weight: 600;
     }
     .header .header-top .search-area input{
-        width: 500px;
+        width: 380px;
         padding: 20px 20px;
         padding-right: 40px;
     }
@@ -660,13 +720,13 @@
         color: rgba(68, 67, 67, 0.644);
     }
     .header .header-top .icon .wishlist{
-        margin-right: 20px;
+        margin-right: 15px;
     }
     .header .header-top .icon .wishlist i{
-        font-size: 36px;
+        font-size: 30px;
     }
     .header .header-top .icon .cart img{
-        width: 40px;
+        width: 33px;
     }
     .container{
         width: auto;
