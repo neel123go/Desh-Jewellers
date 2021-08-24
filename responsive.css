@@ -642,6 +642,9 @@
     .header .header-top .icon .login p{
         font-size: 18px;
     }
+    header .header-bottom nav ul{
+        top: 70px;
+    }
     .container{
         width: auto;
         justify-content: space-between;
@@ -728,6 +731,9 @@
     .header .header-top .icon .cart img{
         width: 33px;
     }
+    header .header-bottom nav ul{
+        top: 73px;
+    }
     .container{
         width: auto;
         justify-content: space-between;
@@ -781,6 +787,9 @@
     }
     .header .header-top{
         padding: 40px 90px;
+    }
+    header .header-bottom nav ul{
+        top: 73px;
     }
     .container{
         width: auto;
