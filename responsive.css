@@ -103,6 +103,42 @@
         width: 290px;
         height: auto;
     }
+    footer .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    footer .main-content .box{
+        padding: 20px 20px;
+        margin: 5px 0;
+    }
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    footer .main-content .left .social a span{
+        width: 35px;
+        height: 35px;
+        font-size: 17px;
+        line-height: 35px;
+        border-radius: 5px;
+    }
+    footer .bottom{
+        display: block;
+        padding: 10px 20px;
+    }
+    footer .bottom .copyright p{
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    footer .main-content .center .text{
+        font-size: 14px;
+        margin-left: 5px;
+    }
+    footer .bottom .link a{
+        margin-right: 15px;
+        margin-top: 20px;
+    }
 }
 
 
@@ -212,6 +248,44 @@
         width: 190px;
         height: auto;
     }
+    footer .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    footer .main-content .box{
+        padding: 20px 40px;
+        margin: 5px 0;
+    }
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    footer .main-content .left .social a span{
+        width: 35px;
+        height: 35px;
+        font-size: 17px;
+        line-height: 35px;
+        border-radius: 5px;
+    }
+    footer .bottom{
+        display: block;
+        padding: 10px 40px;
+    }
+    footer .bottom .copyright p{
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    footer .main-content .center .text{
+        margin-left: 10px;
+    }
+    footer .bottom .link{
+        text-align: center;
+    }
+    footer .bottom .link a{
+        margin-right: 15px;
+        margin-top: 20px;
+    }
 }
 
 
@@ -306,6 +380,47 @@
     .slider .wrapper .carousel .card img{
         width: 220px;
         height: auto;
+    }
+    footer .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    footer .main-content .box{
+        padding: 20px 40px;
+        margin: 5px 0;
+    }
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    footer .main-content .left .social a span{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    footer .bottom{
+        display: block;
+        padding: 10px 40px;
+    }
+    footer .bottom .copyright p{
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    footer .bottom .link{
+        text-align: center;
+    }
+    footer .bottom .link a{
+        margin-right: 15px;
+        margin-top: 20px;
+    }
+    footer .main-content .right form input[type="text"], form textarea{
+        padding: 10px 10px
     }
 }
 
@@ -407,6 +522,47 @@
         width: 220px;
         height: auto;
     }
+    footer .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    footer .main-content .box{
+        padding: 20px 40px;
+        margin: 5px 0;
+    }
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    footer .main-content .left .social a span{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    footer .bottom{
+        display: block;
+        padding: 10px 40px;
+    }
+    footer .bottom .copyright p{
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    footer .bottom .link{
+        text-align: center;
+    }
+    footer .bottom .link a{
+        margin-right: 15px;
+        margin-top: 20px;
+    }
+    footer .main-content .right form input[type="text"], form textarea{
+        padding: 10px 10px
+    }
 }
 
 
@@ -501,6 +657,47 @@
         width: 250px;
         height: auto;
     }
+    footer .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    footer .main-content .box{
+        padding: 20px 40px;
+        margin: 5px 0;
+    }
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    footer .main-content .left .social a span{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    footer .bottom{
+        display: block;
+        padding: 10px 40px;
+    }
+    footer .bottom .copyright p{
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    footer .bottom .link{
+        text-align: center;
+    }
+    footer .bottom .link a{
+        margin-right: 15px;
+        margin-top: 20px;
+    }
+    footer .main-content .right form input[type="text"], form textarea{
+        padding: 10px 10px
+    }
 }
 
 
@@ -592,6 +789,15 @@
     .slider .wrapper .carousel .card img{
         width: 220px;
         height: auto;
+    }
+    footer .main-content{
+        padding: 0 20px;
+    }
+    footer .main-content .box{
+        padding: 20px 10px;
+    }
+    footer .main-content .center .text{
+        font-size: 14px;
     }
 }
 
@@ -689,6 +895,12 @@
         width: 240px;
         height: auto;
     }
+    footer .main-content{
+        padding: 0 20px;
+    }
+    footer .main-content .box{
+        padding: 20px 10px;
+    }
 }
 
 
@@ -777,6 +989,12 @@
     .slider .wrapper .carousel .card img{
         width: 220px;
         height: auto;
+    }
+    footer .main-content{
+        padding: 0 20px;
+    }
+    footer .main-content .box{
+        padding: 20px 10px;
     }
 }
 
