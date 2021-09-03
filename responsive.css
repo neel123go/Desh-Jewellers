@@ -147,7 +147,39 @@
     
 }
 
+/* ALL PRODUCTS EXTRA RESPONSIVE START */
 
+
+@media (min-width: 340px) and (max-width: 369px){
+    .products .wrapper{
+        padding: 0 40px;
+    }
+}
+@media (min-width: 370px) and (max-width: 399px){
+    .products .wrapper{
+        padding: 0 60px;
+    }
+}
+@media (min-width: 400px) and (max-width: 629px){
+    .products .wrapper{
+        padding: 0 10px;
+    }
+    .products .wrapper .carousel2 .card{
+        margin: 0 3px;
+    }
+}
+@media (min-width: 630px) and (max-width: 749px){
+    .products .wrapper{
+        padding: 0 40px;
+    }
+}
+@media (min-width: 750px) and (max-width: 768px){
+    .products .wrapper{
+        padding: 0 10px;
+    }
+}
+
+/* ALL PRODUCTS EXTRA RESPONSIVE END */
 
 @media (min-width: 481px) and (max-width: 768px){
     header{
@@ -257,7 +289,7 @@
     .best-sales .heading{
         font-size: 35px;
         margin-bottom: 2px;
-        margin-top: 10px;
+        margin-top: 20px;
     }
     footer .main-content{
         flex-wrap: wrap;
@@ -390,6 +422,9 @@
     .slider .wrapper .carousel .card img{
         width: 220px;
         height: auto;
+    }
+    .products .wrapper{
+        padding: 0 20px;
     }
     footer .main-content{
         flex-wrap: wrap;
@@ -667,6 +702,9 @@
         width: 250px;
         height: auto;
     }
+    .products .wrapper{
+        padding: 0 20px;
+    }
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
@@ -674,10 +712,6 @@
     footer .main-content .box{
         padding: 20px 40px;
         margin: 5px 0;
-    }
-    footer{
-        position: relative;
-        bottom: 0px;
     }
     footer{
         position: relative;

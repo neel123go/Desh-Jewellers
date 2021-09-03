@@ -7,7 +7,7 @@ body{
     overflow-x: hidden;
     font-family: 'rubik',sans-serif;
     text-transform: capitalize;
-    background: #f2f3f4;
+    background: #f5f5f5;
 }
 ul{
     list-style: none;
@@ -248,7 +248,7 @@ header .header-bottom .navbar li a:hover{
 .slider {
     width: 100%;
     display: flex;
-    min-height: 55vh;
+    min-height: 25vh;
 }
 .slider .wrapper{
     width: 100%;
@@ -291,17 +291,17 @@ header .header-bottom .navbar li a:hover{
     background: #cea45f;
 }
 
-/* STYLE BEST SAKES SECTION */
+/* STYLE BEST SALES SECTION */
 .best-sales{
     display: flex;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 .best-sales .heading{
     text-align: center;
     font-size: 40px;
-    color: #d4a353;
+    color: #e7615d;
     margin-bottom: 10px;
     margin-top: 20px;
 }
@@ -428,15 +428,145 @@ header .header-bottom .navbar li a:hover{
 }
 
 
-
-
-
-
-
-
-
-
-
+/* STYLE PRODUCTS SECTION */
+.products {
+    width: 100%;
+    display: flex;
+    height: auto;
+}
+.products .heading{
+    text-align: center;
+    font-size: 30px;
+    color: #e7615d;
+    margin-bottom: 10px;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+.products .wrapper{
+    width: 100%;
+    padding: 0 30px;
+    margin-bottom: 50px;
+}
+.products .wrapper .carousel2{
+    max-width: 1500px;
+    margin: 20px auto;
+}
+.products .wrapper .carousel2 .card{
+    border-radius: 10px;
+    width: auto;
+    height: 352px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    margin: 0 5px;
+}
+.products .wrapper .carousel2 .card img {
+    width: -webkit-fill-available;
+}
+.products .wrapper .owl-dots{
+    text-align: center;
+    margin-top: 10px;
+}
+.products .wrapper .owl-dot{
+    height: 15px;
+    width: 25px;
+    border: 2px solid #cea45f !important;
+    cursor: pointer;
+    outline: none;
+    border-radius: 25px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.products .wrapper .owl-dot:hover{
+    background: #cea45f;
+}
+.products .wrapper .owl-dot.active{
+    width: 45px;
+    background: #cea45f;
+}
+.products .card .action{
+    position: absolute;
+    bottom: -35px;
+    right: 120px;
+    display: flex;
+}
+.products .card:hover .action li{
+    transform: translateY(-50px) translateX(60px);
+}
+.products .card .action li{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #55afb39c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    color: #3b444bd8;
+    transition: transform 0.5s;
+    transform: translateX(60px);
+}
+.products .card .action .sec{
+    transition-delay: 0.15s;
+}
+.products .card .action .thi{
+    transition-delay: 0.3s;
+}
+.products .card .action li:hover{
+    background-color: #55aeb3c9;
+}
+.products .card img{
+    width: 245px;
+    height: 200px;
+}
+.products .card .rateing{
+    margin: 0 20px;
+    display: flex;
+}
+.products .card .rateing .fa{
+    color: #eeb965;
+    margin-right: 2px;
+}
+.products .card .rateing .gray{
+    color: #423b2f;
+    margin-right: 2px;
+}
+.products .card .rateing p{
+    font-size: 15px;
+    font-family: Arial;
+    color: #333;
+}
+.products .card .product-name h3{
+    font-size: 16px;
+    color: #3b444b;
+    margin: 10px 20px;
+}
+.products .card .product-price h2{
+    font-size: 23px;
+    color: #e7615d;
+    margin: 10px 20px;
+}
+.products .btn{
+    text-align: center;
+    width: auto;
+    height: 50px;
+}
+.products .btn a{
+    padding: 12px 45px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #202020;
+    background-color: #f5f5f5;
+    border: 1px solid #818181;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.products .btn a:hover{
+    background-color: #3b444b;
+    color: #fff;
+    border: none;
+}
 
 
 

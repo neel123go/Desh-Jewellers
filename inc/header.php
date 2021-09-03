@@ -108,7 +108,7 @@
                     <div class="navbar">
                         <ul>
                             <li><a href="#">home</a></li>
-                            <li><a href="#">best sales</a></li>
+                            <li><a href="#bestsale">best sales</a></li>
                             <li><a href="#">new collection</a></li>
                             <li><a href="#">offers</a></li>
                         </ul>
