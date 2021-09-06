@@ -40,7 +40,35 @@
             return $result;
         }
 
+        public function getCatbyId($id){
+            $query = "SELECT * FROM tbl_main_category WHERE catId = '$id'";
+            $result = $this->db->select($query);
+            return $result;
+        }
 
+        public function catUpdate($catName, $id){
+            $catName = $this->fr->validation($catName);
+            $catName = mysqli_real_escape_string($this->db->link, $catName);
+            $id = mysqli_real_escape_string($this->db->link, $id);
+
+            if (empty($catName)) {
+                $msg = "<span style='color: red'>Pleasse, Enter a category name.<span>";
+                return $msg;
+            } else {
+                $query = "UPDATE tbl_main_category SET
+                        catName = '$catName'
+                        WHERE catId = '$id'
+                ";
+                $update_cat = $this->db->update($query);
+                if ($update_cat) {
+                    $msg = "<span style='color: green'>Category updated successfully.<span>";
+                    return $msg;
+                } else {
+                    $msg = "<span style='color: red'>Something went worng! Category doesn't updated.<span>";
+                    return $msg;
+                }
+            }
+        }
 
     }
 ?>

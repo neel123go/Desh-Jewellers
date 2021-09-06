@@ -30,7 +30,7 @@
 						<tr class="odd gradeX">
 							<td><?php echo $i; ?></td>
 							<td><?php echo $result['catName']; ?></td>
-							<td><a href="editcat?catid=<?php echo $result['catId']; ?>">Edit</a> || <a onclick="return confirm('Are you sure to delete this category ?')" href="?delid=<?php echo $result['catId']; ?>">Delete</a></td>
+							<td><a href="editcat.php?catid=<?php echo $result['catId']; ?>">Edit</a> || <a onclick="return confirm('Are you sure to delete this category ?')" href="?delid=<?php echo $result['catId']; ?>">Delete</a></td>
 						</tr>
 		
 		<?php }	} ?>
