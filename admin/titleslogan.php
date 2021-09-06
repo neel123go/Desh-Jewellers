@@ -4,24 +4,24 @@
         <div class="grid_10">
 		
             <div class="box round first grid">
-                <h2>Change Password</h2>
-                <div class="block">               
+                <h2>Update Site Title and Description</h2>
+                <div class="block sloginblock">               
                  <form>
                     <table class="form">					
                         <tr>
                             <td>
-                                <label>Old Password</label>
+                                <label>Website Title</label>
                             </td>
                             <td>
-                                <input type="password" placeholder="Enter Old Password..."  name="title" class="medium" />
+                                <input type="text" placeholder="Enter Website Title..."  name="title" class="medium" />
                             </td>
                         </tr>
 						 <tr>
                             <td>
-                                <label>New Password</label>
+                                <label>Website Slogan</label>
                             </td>
                             <td>
-                                <input type="password" placeholder="Enter New Password..." name="slogan" class="medium" />
+                                <input type="text" placeholder="Enter Website Slogan..." name="slogan" class="medium" />
                             </td>
                         </tr>
 						 
@@ -38,5 +38,5 @@
                 </div>
             </div>
         </div>
-    
+
 <?php include 'inc/footer.php'; ?>
