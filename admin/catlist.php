@@ -3,12 +3,26 @@
 <?php include '../classes/Category.php'; ?>
 <?php
     $cat = new Category();
+
+	if (isset($_GET['delid'])) {
+		$delid = $_GET['delid'];
+		$delcal = $cat->deletecat($delid);
+	}
 ?>
+
 
         <div class="grid_10">
             <div class="box round first grid">
                 <h2>Category List</h2>
-                <div class="block">        
+				<?php
+			if (isset($delcal)) {
+				echo $delcal;
+			}
+		?>
+                <div class="block">
+					
+		
+
                     <table class="data display datatable" id="example">
 					<thead>
 						<tr>
@@ -40,5 +54,13 @@
                </div>
             </div>
         </div>
+
+	<script type="text/javascript">
+	$(document).ready(function () {
+		setupLeftMenu();
+		$('.datatable').dataTable();
+		setSidebarHeight();
+	});
+    </script>
 
 <?php include 'inc/footer.php'; ?>

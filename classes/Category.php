@@ -19,16 +19,16 @@
             $catName = mysqli_real_escape_string($this->db->link, $catName);
 
             if (empty($catName)) {
-                $msg = "<span style='color: red'>Category filde must not be empty !<span>";
+                $msg = "<span class='error'>Category filde must not be empty !<span>";
                 return $msg;
             } else {
                 $query = "INSERT INTO tbl_main_category(catName) VALUES('$catName')";
                 $catinsert = $this->db->insert($query);
                 if ($catinsert) {
-                    $msg = "<span style='color: green'>Category added successfully !<span>";
+                    $msg = "<span class='success'>Category added successfully !<span>";
                     return $msg;
                 } else {
-                    $msg = "<span style='color: red'>Something went worng! Category doesn't added.<span>";
+                    $msg = "<span class='error'>Something went worng! Category doesn't added.<span>";
                     return $msg;
                 }
             }
@@ -52,7 +52,7 @@
             $id = mysqli_real_escape_string($this->db->link, $id);
 
             if (empty($catName)) {
-                $msg = "<span style='color: red'>Pleasse, Enter a category name.<span>";
+                $msg = "<span class='error'>Pleasse, Enter a category name.<span>";
                 return $msg;
             } else {
                 $query = "UPDATE tbl_main_category SET
@@ -61,12 +61,24 @@
                 ";
                 $update_cat = $this->db->update($query);
                 if ($update_cat) {
-                    $msg = "<span style='color: green'>Category updated successfully.<span>";
+                    $msg = "<span class='success'>Category updated successfully.<span>";
                     return $msg;
                 } else {
-                    $msg = "<span style='color: red'>Something went worng! Category doesn't updated.<span>";
+                    $msg = "<span class='error'>Something went worng! Category doesn't updated.<span>";
                     return $msg;
                 }
+            }
+        }
+
+        public function deletecat($delid){
+            $query = "DELETE FROM tbl_main_category WHERE catId = '$delid'";
+            $del_cat = $this->db->delete($query);
+            if ($del_cat) {
+                $msg = "<span class='success'>Category deleted successfully.<span>";
+                return $msg;
+            } else {
+                $msg = "<span class='error'>Something went worng! Category doesn't deleted.<span>";
+                return $msg;
             }
         }
 

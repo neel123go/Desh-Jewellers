@@ -32,7 +32,8 @@ body {
 .inline-ul li{display:inline; color:#fff;}
 .marginleft10{margin-left:10px;}
 .grey{color:#C2C2C2;}
-
+.success{color: #2aa965; font-size: 18px;}
+.error{color: #c00c23; font-size: 18px;}
 /* anchors
 ----------------------------------------------- */
 a {
