@@ -21,6 +21,8 @@
                             <ul class="submenu">
                                 <li><a href="./addcat.php">Add Category</a> </li>
                                 <li><a href="./catlist.php">Category List</a> </li>
+                                <li><a href="./addsubcat.php">Add Sub Category</a> </li>
+                                <li><a href="./subcatlist.php">Sub Category List</a> </li>
                             </ul>
                         </li>
                         <li><a class="menuitem">Post Option</a>

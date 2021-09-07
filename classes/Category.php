@@ -81,6 +81,72 @@
                 return $msg;
             }
         }
+        
+        public function subcatinsert($maincatName, $subcatName){
+            $maincatName = $this->fr->validation($maincatName);
+            $maincatName = mysqli_real_escape_string($this->db->link, $maincatName);
+
+            $subcatName = $this->fr->validation($subcatName);
+            $subcatName = mysqli_real_escape_string($this->db->link, $subcatName);
+
+            if (empty($maincatName) || empty($subcatName)) {
+                $msg = "<span class='error'>Category filde must not be empty !<span>";
+                return $msg;
+            } else {
+                $query = "INSERT INTO tbl_sub_category(maincatName, subcatName) VALUES('$maincatName', '$subcatName')";
+                $catinsert = $this->db->insert($query);
+                if ($catinsert) {
+                    $msg = "<span class='success'>Category added successfully !<span>";
+                    return $msg;
+                } else {
+                    $msg = "<span class='error'>Something went worng! Category doesn't added.<span>";
+                    return $msg;
+                }
+            }
+        }
+
+        public function getAllsubcat(){
+            $query = "SELECT * FROM tbl_sub_category ORDER BY catId";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+        public function subcatupdate($maincatName, $subcatName, $id){
+            $maincatName = $this->fr->validation($maincatName);
+            $maincatName = mysqli_real_escape_string($this->db->link, $maincatName);
+            $subcatName = $this->fr->validation($subcatName);
+            $subcatName = mysqli_real_escape_string($this->db->link, $subcatName);
+            $id = mysqli_real_escape_string($this->db->link, $id);
+
+            if (empty($maincatName) || empty($subcatName)) {
+                $msg = "<span class='error'>Filde must not be empty !<span>";
+                return $msg;
+            } else {
+                $query = "UPDATE tbl_sub_category SET
+                        maincatName = '$maincatName'
+                        subcatName = '$subcatName'
+                        WHERE catId = '$id'
+                ";
+                $update_cat = $this->db->update($query);
+                if ($update_cat) {
+                    $msg = "<span class='success'>Sub Category updated successfully.<span>";
+                    return $msg;
+                } else {
+                    $msg = "<span class='error'>Something went worng! Sub Category doesn't updated.<span>";
+                    return $msg;
+                }
+            }
+        }
+
+        public function getSubcatByid($id){
+            $query = "SELECT * FROM tbl_sub_category WHERE catId = '$id'";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+
+
+
 
     }
 ?>

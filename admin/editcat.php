@@ -1,5 +1,5 @@
 <?php include 'inc/header.php'; ?>
-<?php include 'inc/slider.php'; ?>
+<?php include 'inc/sidebar.php'; ?>
 <?php include '../classes/Category.php'; ?>
 <?php
     if (!isset($_GET['catid']) || $_GET['catid'] == NULL) {
@@ -17,7 +17,7 @@
         <div class="grid_10">
 		
             <div class="box round first grid">
-                <h2>Add New Category</h2>
+                <h2>Edit Category</h2>
                <div class="block copyblock">
 
         <?php
