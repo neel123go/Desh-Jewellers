@@ -111,19 +111,20 @@
             return $result;
         }
 
-        public function subcatupdate($maincatName, $subcatName, $id){
+        public function SubcatUpdate($id, $maincatName, $subcatName){
+            $id = mysqli_real_escape_string($this->db->link, $id);
             $maincatName = $this->fr->validation($maincatName);
             $maincatName = mysqli_real_escape_string($this->db->link, $maincatName);
             $subcatName = $this->fr->validation($subcatName);
             $subcatName = mysqli_real_escape_string($this->db->link, $subcatName);
-            $id = mysqli_real_escape_string($this->db->link, $id);
+            
 
             if (empty($maincatName) || empty($subcatName)) {
                 $msg = "<span class='error'>Filde must not be empty !<span>";
                 return $msg;
             } else {
                 $query = "UPDATE tbl_sub_category SET
-                        maincatName = '$maincatName'
+                        maincatName = '$maincatName',
                         subcatName = '$subcatName'
                         WHERE catId = '$id'
                 ";
@@ -144,6 +145,17 @@
             return $result;
         }
 
+        public function deletesubcat($delid){
+            $query = "DELETE FROM tbl_sub_category WHERE catId = '$delid'";
+            $del_cat = $this->db->delete($query);
+            if ($del_cat) {
+                $msg = "<span class='success'>Sub Category deleted successfully.<span>";
+                return $msg;
+            } else {
+                $msg = "<span class='error'>Something went worng! Sub Category doesn't deleted.<span>";
+                return $msg;
+            }
+        }
 
 
 

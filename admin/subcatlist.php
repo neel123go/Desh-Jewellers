@@ -6,7 +6,7 @@
 
 	if (isset($_GET['delid'])) {
         $delid = $_GET['delid'];
-		$delcal = $cat->deletecat($delid);
+		$delcat = $cat->deletesubcat($delid);
 	}
 ?>
 
@@ -15,8 +15,8 @@
             <div class="box round first grid">
                 <h2>Category List</h2>
 		<?php
-			if (isset($delcal)) {
-				echo $delcal;
+			if (isset($delcat)) {
+				echo $delcat;
 			}
 		?>
                 <div class="block">

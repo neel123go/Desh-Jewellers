@@ -28,11 +28,20 @@ error_reporting(0);
                     <table class="form">
                         <tr>
                             <td>
-                                <input type="radio" name="maincatName" value="Gold">Gold
-                                <input type="radio" name="maincatName" value="Gold Plate">Gold Plate
-                                <input type="radio" name="maincatName" value="Diamond">Diamond
+
+        <?php
+            
+            $maincat = $cat->getAllcat();
+            if ($maincat) {
+                while ($result = $maincat->fetch_assoc()) {
+        ?>
+
+                                <input type="radio" name="maincatName" value="<?php echo $result['catName']; ?>"><?php echo $result['catName']; ?>
+                                
+        <?php } } ?>
+
                             </td>
-                        </tr>				
+                        </tr>	
                         <tr>
                             <td>
                                 <input type="text" name="subcatName" autocomplete="off" placeholder="Enter Category Name..." class="medium" />

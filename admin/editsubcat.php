@@ -3,16 +3,17 @@
 <?php include '../classes/Category.php'; ?>
 <?php
     if (!isset($_GET['catid']) || $_GET['catid'] == NULL) {
-        echo "<script>window.location = 'catlist.php'; </script>";
+        echo "<script>window.location = 'subcatlist.php'; </script>";
     } else {
         $id = $_GET['catid'];
     }
-
+?>
+<?php
     $cat = new Category();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$maincatName = $_POST['maincatName'];
-		$subcatName = $_POST['subcatName'];
-		$updatesubcat = $cat->subcatupdate($maincatName, $subcatName, $id);
+        $subcatName = $_POST['subcatName'];
+		$updatesubcat = $cat->SubcatUpdate($id, $maincatName, $subcatName);
 	}
 ?>
 
@@ -34,7 +35,7 @@
                 while ($result = $getCatbyId->fetch_assoc()) {
         ?>
 
-                 <form action="editsubcat.php" method="post">
+                 <form action="" method="post">
                     <table class="form">
                         <tr>
                             <td>
@@ -56,15 +57,6 @@
         ?>
 
                                 >Gold Plate
-                                <input type="radio" name="maincatName" value="Diamond"
-                                
-        <?php
-            if ($result["maincatName"] == 'Diamond') {
-                echo "checked";
-            }
-        ?>
-                                
-                                >Diamond
                             </td>
                         </tr>				
                         <tr>
