@@ -5,7 +5,7 @@
     if (!isset($_GET['catid']) || $_GET['catid'] == NULL) {
         echo "<script>window.location = 'subcatlist.php'; </script>";
     } else {
-        $id = $_GET['catid'];
+        $id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['catid']);
     }
 ?>
 <?php
