@@ -1,12 +1,17 @@
-﻿<?php include 'inc/header.php'; ?>
+<?php include 'inc/header.php'; ?>
 <?php include 'inc/sidebar.php'; ?>
 <?php include '../classes/Category.php'; ?>
 <?php include '../classes/Product.php'; ?>
 <?php
+    if (!isset($_GET['proid']) || $_GET['proid'] == NULL) {
+        echo "<script>window.location = 'productlist.php'; </script>";
+    } else {
+        $id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['proid']);
+    }
     $pd = new Product();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-		$insertpd = $pd->productinsert($_POST, $_FILES);
+		$updatepd = $pd->productupdate($_POST, $_FILES, $id);
 	}
 ?>
 
@@ -16,19 +21,23 @@
                 <div class="block">
                     
         <?php
-            if (isset($insertpd)) {
-                echo $insertpd;
+            if (isset($updatepd)) {
+                echo $updatepd;
             }
+
+            $getproduct = $pd->getproductbyid($id);
+            if ($getproduct) {
+                while ($value = $getproduct->fetch_assoc()) {
         ?>
 
-                 <form action="addproduct.php" method="post" enctype="multipart/form-data">
+                 <form action="" method="post" enctype="multipart/form-data">
                     <table class="form">
                         <tr>
                             <td>
                                 <label>Product Name</label>
                             </td>
                             <td>
-                                <input type="text" name="productName" autocomplete="off" placeholder="Enter Post Title..." class="medium" />
+                                <input type="text" name="productName" autocomplete="off" value="<?php echo $value['productName']; ?>" class="medium" />
                             </td>
                         </tr>
                      
@@ -47,7 +56,15 @@
                     while ($result = $getcat->fetch_assoc()) {
             ?>
                                     
-                                    <option value="<?php echo $result['catId']; ?>"><?php echo $result['catName']; ?></option>
+                                    <option 
+
+                        <?php
+                            if ($value['catId'] == $result['catId']) {
+                                echo "selected";
+                            }
+                        ?>
+
+                                    value="<?php echo $result['catId']; ?>"><?php echo $result['catName']; ?></option>
 
             <?php } } ?>
 
@@ -69,7 +86,15 @@
                     while ($result = $getsubcat->fetch_assoc()) {
             ?>
                                     
-                                    <option value="<?php echo $result['catId']; ?>"><?php echo $result['subcatName']; ?> (<?php echo $result['maincatName']; ?>)</option>
+                                    <option 
+                                    
+                        <?php
+                            if ($value['catId'] == $result['catId']) {
+                                echo "selected";
+                            }
+                        ?>
+
+                                    value="<?php echo $result['catId']; ?>"><?php echo $result['subcatName']; ?> (<?php echo $result['maincatName']; ?>)</option>
 
             <?php } } ?>
 
@@ -82,6 +107,7 @@
                                 <label>Upload Image</label>
                             </td>
                             <td>
+                                <img src="<?php echo $value['image']; ?>" width="200px" height="200px"><br>
                                 <input type="file" name="image" />
                             </td>
                         </tr>
@@ -91,7 +117,7 @@
                                 <label>Description</label>
                             </td>
                             <td>
-                                <textarea class="tinymce" name="body" cols="70" rows="8"></textarea>
+                                <textarea name="body" cols="70" rows="8"><?php echo $value['body']; ?></textarea>
                             </td>
                         </tr>
 
@@ -100,7 +126,7 @@
                                 <label>Product Price</label>
                             </td>
                             <td>
-                                <input type="text" name="price" autocomplete="off" placeholder="Product Price" />
+                                <input type="text" name="price" autocomplete="off" value="<?php echo $value['price']; ?>" />
                             </td>
                         </tr>
 
@@ -109,7 +135,7 @@
                                 <label>Product Rating</label>
                             </td>
                             <td>
-                                <input type="reange" name="rating" autocomplete="off" placeholder="5.0" />
+                                <input type="reange" name="rating" autocomplete="off" value="<?php echo $value['rating']; ?>" />
                             </td>
                         </tr>
 
@@ -120,8 +146,16 @@
                             <td>
                                 <select name="type" id="select">
                                     <option>Select Type</option>
-                                    <option value="0">Featured</option>
-                                    <option value="1">General</option>
+
+                        <?php if ($value['type'] == 0) { ?>
+                                <option selected="selected" value="0">Featured</option>
+                                <option value="1">General</option>
+                        <?php } else { ?>
+                                <option selected="selected" value="1">General</option>
+                                <option value="0">Featured</option>
+                        <?php } ?>
+
+                                    
                                 </select>
                             </td>
                         </tr>
@@ -131,7 +165,7 @@
                                 <label>Date</label>
                             </td>
                             <td>
-                                <input type="date" name="date" />
+                                <input type="date" name="date" value="<?php echo $value['date']; ?>" />
                             </td>
                         </tr>
 
@@ -140,11 +174,14 @@
 						<tr>
                             <td></td>
                             <td>
-                                <input type="submit" name="submit" Value="Upload" />
+                                <input type="submit" name="submit" Value="Update" />
                             </td>
                         </tr>
                     </table>
                    </form>
+
+            <?php } } ?>
+
                 </div>
             </div>
         </div>

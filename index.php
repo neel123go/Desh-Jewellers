@@ -391,7 +391,7 @@
             <div class="wrapper">
                 <div class="carousel2 owl-carousel">
                     <div class="card">
-                        <img src="assets/sliderimg-1.png" alt="Slider Image - 1">
+                        <img src="assets/img-1.png" alt="Slider Image - 1">
                         <div class="rateing">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -430,7 +430,7 @@
                         </ul>
                     </div>
                     <div class="card">
-                        <img src="assets/sliderimg-2.png" alt="Slider Image - 2">
+                        <img src="assets/img-2.png" alt="Slider Image - 2">
                         <div class="rateing">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -469,7 +469,7 @@
                         </ul>
                     </div>
                     <div class="card">
-                        <img src="assets/sliderimg-3.png" alt="Slider Image - 3">
+                        <img src="assets/img-3.png" alt="Slider Image - 3">
                         <div class="rateing">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -508,7 +508,7 @@
                         </ul>
                     </div>
                     <div class="card">
-                        <img src="assets/sliderimg-4.png" alt="Slider Image - 4">
+                        <img src="assets/sliderimg-6.png" alt="Slider Image - 4">
                         <div class="rateing">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -547,7 +547,7 @@
                         </ul>
                     </div>
                     <div class="card">
-                        <img src="assets/sliderimg-5.png" alt="Slider Image - 5">
+                        <img src="assets/img-5.png" alt="Slider Image - 5">
                         <div class="rateing">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>

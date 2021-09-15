@@ -9,7 +9,7 @@
                 <div class="card"><img src="assets/sliderimg-5.png" alt="Slider Image - 5"></div>
                 <div class="card"><img src="assets/sliderimg-6.png" alt="Slider Image - 6"></div>
                 <div class="card"><img src="assets/sliderimg-7.png" alt="Slider Image - 7"></div>
-                <div class="card"><img src="assets/sliderimg-1.png" alt="Slider Image - 8"></div>
+                <div class="card"><img src="assets/img-1.png" alt="Slider Image - 8"></div>
             </div>
         </div>
     </div>

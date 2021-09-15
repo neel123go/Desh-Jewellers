@@ -9,6 +9,8 @@ body {
   font-size: 14px;
   padding: 0;
 }
+.success{color: #35ec8a;}
+.error{color: #c00c23;}
 /* commons
 ----------------------------------------------- */
 .floatleft{float:left;}
@@ -32,8 +34,7 @@ body {
 .inline-ul li{display:inline; color:#fff;}
 .marginleft10{margin-left:10px;}
 .grey{color:#C2C2C2;}
-.success{color: #35ec8a; font-size: 18px;}
-.error{color: #c00c23; font-size: 18px;}
+
 /* anchors
 ----------------------------------------------- */
 a {
