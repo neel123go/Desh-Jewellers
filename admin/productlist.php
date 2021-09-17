@@ -61,7 +61,11 @@
 							<td>
 								<?php
 									if ($result['type'] == 0) {
-										echo "Featured";
+										echo "New";
+									} elseif ($result['type'] == 1) {
+										echo "Best Sale";
+									} elseif ($result['type'] == 2) {
+										echo "Flash Deals";
 									} else {
 										echo "General";
 									}

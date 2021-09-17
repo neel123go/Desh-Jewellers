@@ -1,3 +1,29 @@
+<?php 
+    include 'lib/Session.php';
+    Session::init();
+
+    include 'lib/Database.php';
+    include 'helper/Format.php';
+
+    spl_autoload_register(function($classes){
+        include_once "classes/".$classes.".php";
+    });
+
+    $db = new Database();
+    $fm = new Format();
+    $pd = new Product();
+    $cat = new Category();
+    $ct = new Cart();
+    $user = new User();
+?>
+
+<?php
+    // header("Cache-Control: no-cache, must-revalidate");
+    // header("Pragma: no-cache");
+    // header("Expires: Sat, 26 Jul 1997 05:00:00 GTM");
+    // header("Cache-Control: max-age=2592000");
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,8 +71,8 @@
                     </div>
 
                     <div class="login">
-                        <a href="#"><img src="assets/user (1).png" alt=""></a>
-                        <p><a href="#">Login</a> / <a href="#">Sign Up</a></p>
+                        <a href="login.php"><img src="assets/user (1).png" alt=""></a>
+                        <p><a href="login.php">Login</a> / <a href="signup.php">Sign Up</a></p>
                     </div>
                 </div>
             </div>

@@ -148,11 +148,25 @@
                                     <option>Select Type</option>
 
                         <?php if ($value['type'] == 0) { ?>
-                                <option selected="selected" value="0">Featured</option>
-                                <option value="1">General</option>
+                                <option selected="selected" value="0">New</option>
+                                <option value="1">Best Sale</option>
+                                <option value="2">Flash Deals</option>
+                                <option value="3">General</option>
+                        <?php } elseif ($value['type'] == 1) { ?>
+                                <option value="0">New</option>
+                                <option selected="selected" value="1">Best Sale</option>
+                                <option value="2">Flash Deals</option>
+                                <option value="3">General</option>
+                        <?php } elseif ($value['type'] == 2) { ?>
+                                <option value="0">New</option>
+                                <option value="1">Best Sale</option>
+                                <option selected="selected" value="2">Flash Deals</option>
+                                <option value="3">General</option>
                         <?php } else { ?>
-                                <option selected="selected" value="1">General</option>
-                                <option value="0">Featured</option>
+                                <option value="0">New</option>
+                                <option value="1">Best Sale</option>
+                                <option value="2">Flash Deals</option>
+                                <option selected="selected" value="3">General</option>
                         <?php } ?>
 
                                     

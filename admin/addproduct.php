@@ -120,8 +120,10 @@
                             <td>
                                 <select name="type" id="select">
                                     <option>Select Type</option>
-                                    <option value="0">Featured</option>
-                                    <option value="1">General</option>
+                                    <option value="0">New</option>
+                                    <option value="1">Best Sale</option>
+                                    <option value="2">Flash Deals</option>
+                                    <option value="3">General</option>
                                 </select>
                             </td>
                         </tr>
