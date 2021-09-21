@@ -1,6 +1,7 @@
 <?php
-    include_once './lib/Database.php';
-    include_once './helper/Format.php';
+    $filepath = realpath(dirname(__FILE__));
+    include_once ($filepath.'/../lib/Database.php');
+    include_once ($filepath.'/../helper/Format.php');
 ?>
 
 <?php
@@ -208,8 +209,23 @@
                 }
             }
 
+    public function bestsalepd(){
+        $query = "SELECT * FROM tbl_product WHERE type='1' ORDER BY productId LIMIT 4";
+        $result = $this->db->select($query);
+        return $result;
+    }
 
+    public function newpd(){
+        $query = "SELECT * FROM tbl_product WHERE type='0' ORDER BY productId LIMIT 4";
+        $result = $this->db->select($query);
+        return $result;
+    }
 
+    public function loadallproduct(){
+        $query = "SELECT * FROM tbl_product ORDER BY productId";
+        $result = $this->db->select($query);
+        return $result;
+    }
 
 
 

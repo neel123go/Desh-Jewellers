@@ -1,3 +1,12 @@
+<h2 class="slider-heading" style="
+    text-align: center;
+    font-size: 30px;
+    color: #e7615d;
+    padding: 0 35px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    line-height: 1.2;
+"><span style="color: #333;font-family: 'Roboto Mono', monospace;">Explore</span> The New Arrivals</h2>
 <section class="slider">
     <div class="bodycontainer">
         <div class="wrapper">

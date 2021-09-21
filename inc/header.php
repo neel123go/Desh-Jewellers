@@ -5,23 +5,21 @@
     include 'lib/Database.php';
     include 'helper/Format.php';
 
-    spl_autoload_register(function($classes){
-        include_once "classes/".$classes.".php";
+    spl_autoload_register(function($class){
+        include_once "classes/".$class.".php";
     });
 
     $db = new Database();
     $fm = new Format();
     $pd = new Product();
-    $cat = new Category();
     $ct = new Cart();
-    $user = new User();
 ?>
 
 <?php
-    // header("Cache-Control: no-cache, must-revalidate");
-    // header("Pragma: no-cache");
-    // header("Expires: Sat, 26 Jul 1997 05:00:00 GTM");
-    // header("Cache-Control: max-age=2592000");
+    header("Cache-Control: no-cache, must-revalidate");
+    header("Pragma: no-cache");
+    header("Expires: Sat, 26 Jul 1997 05:00:00 GTM");
+    header("Cache-Control: max-age=2592000");
 ?> 
 
 <!DOCTYPE html>
@@ -34,6 +32,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="photos/logo_32x32.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="jquery.nice-number.css">
 
     <!-- OWL SLIDER START -->
 
@@ -65,10 +64,12 @@
                         <p> wishlist</p>
                     </div>
                     
-                    <div class="cart">
-                        <img src="assets/carticon.png">
-                        <p> My cart</p>
-                    </div>
+                    <a href="cart.php">
+                        <div class="cart">
+                            <img src="assets/carticon.png">
+                            <p> My cart</p>
+                        </div>
+                    </a>
 
                     <div class="login">
                         <a href="login.php"><img src="assets/user (1).png" alt=""></a>

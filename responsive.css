@@ -108,6 +108,42 @@
         margin-bottom: 2px;
         margin-top: 30px;
     }
+    .cart-page{
+        margin: 20px 20px;
+    }
+    .cart-page table th{
+        display: none;
+    }
+    .cart-page table td{
+        display: flex;
+    }
+    .cart-page table .cart-content td:nth-child(2){
+        display:none;
+    }
+    .cart-page table tr td input{
+        width: 80px;
+        padding: 5px 10px;
+        margin: 0 3px;
+        font-size: 18px;
+    }
+    .cart-page table tr td button{
+        width: 45px;
+        padding: 0 5px;
+        font-size: 20px;
+    }
+    .cart-page table tr td:nth-child(4){
+        margin-bottom: 20px;
+    }
+    .cart-page table tr td:nth-child(4) span{
+        display: block;
+    }
+    .cart-page .total-price table tr{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cart-page .total-price table td{
+        padding: 5px 0 5px 0px;
+    }
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
@@ -216,16 +252,172 @@
         margin: 0 3px;
     }
 }
+
+/* EXTRA CART PAGE RESPONSIVE START */
+
 @media (min-width: 630px) and (max-width: 749px){
     .products .wrapper{
         padding: 0 40px;
     }
+    .cart-page{
+        margin: 20px 20px;
+    }
+    .cart-page table th{
+        display: none;
+    }
+    .cart-page table td{
+        display: inline-block;
+    }
+    .cart-page table .cart-content{
+        width: 100%;
+    }
+    .cart-page table .cart-content td:nth-child(2){
+        display: none;
+    }
+    .cart-page table tr td input{
+        width: 80px;
+        padding: 5px 10px;
+        margin: 0 3px;
+        font-size: 18px;
+    }
+    .cart-page table tr td input[type="submit"] {
+        display: block;
+        margin: 15px 0;
+    }
+    .cart-page table tr td button{
+        width: 45px;
+        padding: 0 5px;
+        font-size: 20px;
+    }
+    .cart-page table tr td:nth-child(4) {
+        text-align: right;
+        display: revert;
+    }
+    .cart-page table tr td:nth-child(4) span{
+        display: inline-block;
+    }
+    .cart-page .total-price table tr{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cart-page .total-price table td{
+        padding: 5px 0 5px 0px;
+    }
+    .cart-page table tr td {
+        display: table-cell;
+    }
+    .cart-page .total-price table{
+        max-width: 350px;
+    }
 }
-@media (min-width: 750px) and (max-width: 768px){
+
+@media (min-width: 750px) and (max-width: 915px){
     .products .wrapper{
         padding: 0 10px;
     }
+    .cart-page{
+        margin: 40px 50px;
+    }
+    .cart-page table th{
+        display: none;
+    }
+    .cart-page table td{
+        display: inline-block;
+    }
+    .cart-page table .cart-content{
+        width: 100%;
+    }
+    .cart-page table .cart-content td:nth-child(2){
+        display: none;
+    }
+    .cart-page table tr td input{
+        width: 80px;
+        padding: 5px 10px;
+        margin: 0 3px;
+        font-size: 18px;
+    }
+    .cart-page table tr td input[type="submit"] {
+        display: block;
+        margin: 15px 0;
+    }
+    .cart-page table tr td button{
+        width: 45px;
+        padding: 0 5px;
+        font-size: 20px;
+    }
+    .cart-page table tr td:nth-child(4) {
+        text-align: right;
+        display: revert;
+    }
+    .cart-page table tr td:nth-child(4) span{
+        display: inline-block;
+    }
+    .cart-page .total-price table tr{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cart-page .total-price table td{
+        padding: 5px 0 5px 0px;
+    }
+    .cart-page table tr td {
+        display: table-cell;
+    }
+    .cart-page .total-price table{
+        max-width: 415px;
+    }
 }
+
+/* EXTRA CART PAGE RESPONSIVE END */
+
+@media  (min-width: 481px) and (max-width: 749px){
+    .cart-page{
+        margin: 20px 40px;
+    }
+    .cart-page table th{
+        display: none;
+    }
+    .cart-page table .cart-content{
+        width: 100%;
+        display: grid;
+    }
+    .cart-page table .cart-content td:nth-child(2){
+        display: none;
+    }
+    .cart-page table tr td input{
+        width: 80px;
+        padding: 5px 10px;
+        margin: 0 3px;
+        font-size: 18px;
+    }
+    .cart-page table tr td input[type="submit"] {
+        display: block;
+        margin: 15px 0;
+    }
+    .cart-page table tr td button{
+        width: 45px;
+        padding: 0 5px;
+        font-size: 20px;
+    }
+    .cart-page table tr td:nth-child(4) span{
+        display: inline-block;
+    }
+    .cart-page .total-price table td{
+        padding: 5px 0 5px 0px;
+    }
+    .cart-page table tr td {
+        display: table-cell;
+    }
+    .cart-page .total-price table{
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
 
 /* ALL PRODUCTS EXTRA RESPONSIVE END */
 
@@ -753,6 +945,18 @@
     .products .wrapper{
         padding: 0 20px;
     }
+
+
+
+
+
+
+
+
+
+
+
+
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
