@@ -144,6 +144,64 @@
     .cart-page .total-price table td{
         padding: 5px 0 5px 0px;
     }
+    .pro-details-page{
+        margin: 20px 15px;
+        padding: 20px 0px;
+        display: block;
+    }
+    .pro-details-page .detail-r-sec{
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+    .pro-details-page .detail-r-sec h2{
+        font-size: 23px;
+    }
+    .pro-details-page .detail-l-sec .main-img{
+        width: 250px;
+        height: 220px;
+        margin: 0 auto;
+    }
+    .pro-details-page .detail-l-sec .main-img img{
+        width: 250px;
+        height: 220px;
+        margin: 0 auto;
+    }
+    .pro-details-page .detail-l-sec .images{
+        width: 100%;
+        justify-content: center;
+    }
+    .pro-details-page .detail-l-sec .images img{
+        width: 58px;
+        height: 58px;
+    }
+    .pro-details-page .detail-r-sec .action-button form input{
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .notfound{
+        margin: 20px 15px;
+        height: 80vh;
+    }
+    .notfound .main-content h2{
+        font-size: 20vh;
+        color: #f88783;
+    }
+    .notfound .main-content .text{
+        width: 200px;
+    }
+    .notfound .main-content h3{
+        font-size: 4.1vh;
+        margin-top: 15px;
+    }
+    .notfound .main-content p{
+        font-size: 2.8vh;
+        width: 310px;
+        color: #17303b;
+    }
+    .notfound .main-content a:hover{
+        background: #fa7772;
+        padding: 10px 40px;
+    }
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
@@ -531,6 +589,59 @@
         margin-bottom: 2px;
         margin-top: 20px;
     }
+    .pro-details-page{
+        margin: 40px 0px;
+        padding: 40px 0px;
+        display: block;
+    }
+    .pro-details-page .detail-r-sec{
+        padding: 0 40px;
+        margin-top: 20px;
+    }
+    .pro-details-page .detail-r-sec h2{
+        font-size: 23px;
+    }
+    .pro-details-page .detail-l-sec .main-img{
+        width: 350px;
+        height: 320px;
+        margin: 0 auto;
+    }
+    .pro-details-page .detail-l-sec .main-img img{
+        width: 350px;
+        height: 320px;
+        margin: 0 auto;
+    }
+    .pro-details-page .detail-l-sec .images{
+        width: 100%;
+        justify-content: center;
+    }
+    .pro-details-page .detail-l-sec .images img{
+        width: 84px;
+        height: 85px;
+    }
+    .notfound{
+        margin: 40px 30px;
+    }
+    .notfound .main-content h2{
+        font-size: 30vh;
+        color: #f88783;
+    }
+    .notfound .main-content .text{
+        width: 300px;
+    }
+    .notfound .main-content h3{
+        font-size: 4.5vh;
+        margin-top: 15px;
+    }
+    .notfound .main-content p{
+        font-size: 3.2vh;
+        width: 400px;
+        color: #17303b;
+    }
+    .notfound .main-content a:hover{
+        background: #fa7772;
+        padding: 10px 80px;
+    }
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
@@ -665,6 +776,39 @@
     }
     .products .wrapper{
         padding: 0 20px;
+    }
+    .pro-details-page{
+        margin: 40px 0px;
+        padding: 40px 0px;
+        display: block;
+    }
+    .pro-details-page .detail-r-sec{
+        padding: 0 60px;
+        margin-top: 20px;
+    }
+    .pro-details-page .detail-r-sec h2{
+        font-size: 23px;
+    }
+    .pro-details-page .detail-l-sec .main-img{
+        width: 380px;
+        height: 350px;
+        margin: 0 auto;
+    }
+    .pro-details-page .detail-l-sec .main-img img{
+        width: 380px;
+        height: 350px;
+        margin: 0 auto;
+    }
+    .pro-details-page .detail-l-sec .images{
+        width: 100%;
+        justify-content: center;
+    }
+    .pro-details-page .detail-l-sec .images img{
+        width: 100px;
+        height: 100px;
+    }
+    .notfound{
+        margin: 40px 30px;
     }
     footer .main-content{
         flex-wrap: wrap;
@@ -807,6 +951,33 @@
         width: 220px;
         height: auto;
     }
+    .pro-details-page{
+        margin: 40px 0px;
+        padding: 40px 0px;
+    }
+    .pro-details-page .detail-r-sec{
+        padding: 0px 20px;
+    }
+    .pro-details-page .detail-r-sec h2{
+        font-size: 23px;
+    }
+    .pro-details-page .detail-l-sec .main-img{
+        width: 380px;
+        height: 350px;
+        margin: 0 0px;
+    }
+    .pro-details-page .detail-l-sec .main-img img{
+        width: 380px;
+        height: 350px;
+        margin: 0 auto;
+    }
+    .pro-details-page .detail-l-sec .images img{
+        width: 80px;
+        height: 80px;
+    }
+    .notfound{
+        margin: 40px 30px;
+    }
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
@@ -945,18 +1116,33 @@
     .products .wrapper{
         padding: 0 20px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
+    .pro-details-page{
+        margin: 40px 0px;
+        padding: 40px 0px;
+    }
+    .pro-details-page .detail-r-sec{
+        padding: 0px 20px;
+    }
+    .pro-details-page .detail-r-sec h2{
+        font-size: 23px;
+    }
+    .pro-details-page .detail-l-sec .main-img{
+        width: 380px;
+        height: 350px;
+        margin: 0 20px;
+    }
+    .pro-details-page .detail-l-sec .main-img img{
+        width: 380px;
+        height: 350px;
+        margin: 0 auto;
+    }
+    .pro-details-page .detail-l-sec .images img{
+        width: 80px;
+        height: 80px;
+    }
+    .notfound{
+        margin: 40px 30px;
+    }
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
@@ -1086,6 +1272,16 @@
         width: 220px;
         height: auto;
     }
+    .pro-details-page{
+        margin: 40px 30px;
+        padding: 40px 0px;
+    }
+    .pro-details-page .detail-r-sec{
+        padding: 0px 20px;
+    }
+    .notfound{
+        margin: 40px 60px;
+    }
     footer .main-content{
         padding: 0 20px;
     }
@@ -1191,6 +1387,13 @@
         width: 240px;
         height: auto;
     }
+    .pro-details-page{
+        margin: 40px 40px;
+        padding: 40px 0px;
+    }
+    .pro-details-page .detail-r-sec{
+        padding: 0px 20px;
+    }
     footer .main-content{
         padding: 0 20px;
     }
@@ -1285,6 +1488,10 @@
     .slider .wrapper .carousel .card img{
         width: 220px;
         height: auto;
+    }
+    .pro-details-page{
+        margin: 40px 35px;
+        padding: 40px 30px;
     }
     footer .main-content{
         padding: 0 20px;
