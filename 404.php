@@ -8,7 +8,7 @@
                 <p>The page you are looking for doesn't exist</p>
             </div>
 
-            <a href="#">Go To Home</a>
+            <a href="index.php">Go To Home</a>
         </div>
     </div>
 <?php include 'inc/footer.php'; ?>

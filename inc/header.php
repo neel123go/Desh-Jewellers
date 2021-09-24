@@ -48,10 +48,12 @@
     <header>
         <div class="header">
             <div class="header-top">
-                <div class="logo">
-                    <img src="assets/logo_32x32.jpg" alt="logo">
-                    <h1>Dash Jewellers</h1>
-                </div>
+                <a href="index.php">
+                    <div class="logo">
+                        <img src="assets/logo_32x32.jpg" alt="logo">
+                        <h1>Dash Jewellers</h1>
+                    </div>
+                </a>
 
                 <div class="search-area">
                     <input type="text" placeholder="Search entier store here..">
@@ -59,10 +61,12 @@
                 </div>
 
                 <div class="icon">
-                    <div class="wishlist">
-                        <i class="fa fa-heart-o"></i>
-                        <p> wishlist</p>
-                    </div>
+                    <a href="wishlist.php">
+                        <div class="wishlist">
+                            <i class="fa fa-heart-o"></i>
+                            <p> wishlist</p>
+                        </div>
+                    </a>
                     
                     <a href="cart.php">
                         <div class="cart">

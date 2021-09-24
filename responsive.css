@@ -202,6 +202,63 @@
         background: #fa7772;
         padding: 10px 40px;
     }
+    .wishlist-page table th{
+        display: none;
+    }
+    .wishlist-page{
+        margin: 30px 15px;
+    }
+    .wishlist-page table td{
+        border: none;
+    }
+    .wishlist-page table td:nth-child(1){
+        border-left: none;
+    }
+    .wishlist-page table td:last-child{
+        border-right: none;
+    }
+    .wishlist-page table .cart-content{
+        display: grid;
+    }
+    .wishlist-page table td input{
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+    .wishlist-page table td i{
+        font-size: 25px;
+    }    
+    .wishlist-page table td h3{
+        font-size: 18px;
+        margin-bottom: 20px;
+        width: 215px;
+    }
+    .wishlist-page table td h4{
+        font-size: 18px;
+    }
+    .wishlist-page table td h4 span{
+        display: inline-block;
+    }
+    .wishlist-page table img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    .wishlist-page table td:nth-child(3){
+        display: contents;
+        text-align: left;
+    }
+    .wishlist-page table td:nth-child(4){
+        display: block;
+        text-align: right;
+        margin-left: -20px;
+        width: 98%;
+        margin-top: -40px;
+    }
+    .wishlist-page table td:nth-child(5){
+        margin-top: -35px;
+        text-align: right;
+        margin-bottom: 40px;
+    }
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
@@ -642,6 +699,63 @@
         background: #fa7772;
         padding: 10px 80px;
     }
+    .wishlist-page table th{
+        display: none;
+    }
+    .wishlist-page{
+        margin: 30px 40px;
+    }
+    .wishlist-page table td{
+        border: none;
+    }
+    .wishlist-page table td:nth-child(1){
+        border-left: none;
+    }
+    .wishlist-page table td:last-child{
+        border-right: none;
+    }
+    .wishlist-page table .cart-content{
+        display: grid;
+    }
+    .wishlist-page table td input{
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+    .wishlist-page table td i{
+        font-size: 25px;
+    }    
+    .wishlist-page table td h3{
+        font-size: 18px;
+        margin-bottom: 20px;
+        width: 270px;
+    }
+    .wishlist-page table td h4{
+        font-size: 18px;
+    }
+    .wishlist-page table td h4 span{
+        display: inline-block;
+    }
+    .wishlist-page table img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    .wishlist-page table td:nth-child(3){
+        display: contents;
+        text-align: left;
+    }
+    .wishlist-page table td:nth-child(4){
+        display: block;
+        text-align: right;
+        margin-left: -20px;
+        width: 98%;
+        margin-top: -40px;
+    }
+    .wishlist-page table td:nth-child(5){
+        margin-top: -35px;
+        text-align: right;
+        margin-bottom: 40px;
+    }
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
@@ -809,6 +923,26 @@
     }
     .notfound{
         margin: 40px 30px;
+    }
+    .wishlist-page{
+        margin: 30px 30px;
+    }
+    .wishlist-page table td input{
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+    .wishlist-page table td i{
+        font-size: 25px;
+    }    
+    .wishlist-page table td h3{
+        font-size: 18px;
+    }
+    .wishlist-page table td h4{
+        font-size: 18px;
+    }
+    .wishlist-page table img{
+        width: 80px;
+        height: 80px;
     }
     footer .main-content{
         flex-wrap: wrap;
@@ -978,6 +1112,23 @@
     .notfound{
         margin: 40px 30px;
     }
+    .wishlist-page{
+        margin: 30px 30px;
+    }
+    .wishlist-page table td input{
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    .wishlist-page table td h3{
+        font-size: 18px;
+    }
+    .wishlist-page table td h4{
+        font-size: 18px;
+    }
+    .wishlist-page table img{
+        width: 80px;
+        height: 80px;
+    }
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
@@ -1143,6 +1294,9 @@
     .notfound{
         margin: 40px 30px;
     }
+    .wishlist-page{
+        margin: 30px 30px;
+    }
     footer .main-content{
         flex-wrap: wrap;
         flex-direction: column;
@@ -1282,6 +1436,9 @@
     .notfound{
         margin: 40px 60px;
     }
+    .wishlist-page{
+        margin: 50px 60px;
+    }
     footer .main-content{
         padding: 0 20px;
     }
@@ -1394,6 +1551,9 @@
     .pro-details-page .detail-r-sec{
         padding: 0px 20px;
     }
+    .wishlist-page{
+        margin: 50px 77px;
+    }
     footer .main-content{
         padding: 0 20px;
     }
@@ -1492,6 +1652,9 @@
     .pro-details-page{
         margin: 40px 35px;
         padding: 40px 30px;
+    }
+    .wishlist-page{
+        margin: 50px 65px;
     }
     footer .main-content{
         padding: 0 20px;
