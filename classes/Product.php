@@ -227,6 +227,13 @@
         return $result;
     }
 
+    public function getsingleproduct($id){
+        $query = "SELECT p.*, c.catName
+                    FROM tbl_product as p, tbl_main_category as c
+                    WHERE p.catId = c.catId AND p.productId = '$id'";
+        $result = $this->db->select($query);
+        return $result;
+    }
 
 
 

@@ -876,6 +876,9 @@ footer .bottom .link a:last-child{
     font-size: 19px;
     color: #3b444b;
 }
+.cart-page table tr td:first-child{
+    display: table-cell;
+}
 .cart-page table tr .highlight{
     color: #fc4d2a;
 }
@@ -915,13 +918,31 @@ footer .bottom .link a:last-child{
 
 
 .cart-page .total-price{
-    display: flex;
-    justify-content: flex-end;
+    display: block;
+    position: relative;
+    height: 150px;
 }
-.cart-page .total-price table{
+.cart-page .total-price .main-section-total{
     width: 100%;
     border-top: 3px solid #fc4d2a;
-    max-width: 605px;
+    max-width: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.cart-page .total-price .text12{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-page .total-price h3{
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 400;
+}
+.cart-page .total-price span{
+    margin: 10px 0;
+    font-size: 20px;
+    color: #fc4d2a;
 }
 .cart-page td:last-child{
     text-align: right;
@@ -1016,7 +1037,7 @@ footer .bottom .link a:last-child{
 .pro-details-page .detail-r-sec .quantity{
     margin-bottom: 20px;
 }
-.pro-details-page .detail-r-sec .action-button form input{
+.pro-details-page .detail-r-sec .action-button input{
     border: none;
     outline: none;
     font-size: 18px;
@@ -1026,7 +1047,7 @@ footer .bottom .link a:last-child{
     border-radius: 5px;
     cursor: pointer;
 }
-.pro-details-page .detail-r-sec .action-button form input:hover{
+.pro-details-page .detail-r-sec .action-button input:hover{
     background: #74a2ec;
 }
 /* STYLE PRODUCT-DETAILS-PAGE (END) */
@@ -1155,3 +1176,21 @@ footer .bottom .link a:last-child{
     cursor: pointer;
 }
 /* STYLE WISHLIST-PAGE (END) */
+
+/* STYLE EMPTY FILDE (START) */
+.empty{
+    text-align: center;
+}
+.empty h4{
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: unset;
+}
+.empty a{
+    padding: 10px 60px;
+    font-size: 25px;
+    border: 1px solid #3b444b;
+    border-radius: 20px;
+    display: inline-block;
+}
+/* STYLE EMPTY FILDE (END) */

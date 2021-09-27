@@ -1,21 +1,41 @@
 <?php include 'inc/header.php'; ?>
+<?php
+    if (!isset($_GET['proid']) || $_GET['proid'] == NULL) {
+        echo "<script>window.location = '404.php'; </script>";
+    } else {
+        $id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['proid']);
+    }
+    
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		$quantity = $_POST['quantity'];
+        $categoryName = $_POST['category'];
+		$addtocart = $ct->addTocart($quantity, $categoryName, $id);
+	}
+?>
 
 <div class="bodycontainer">
     <div class="pro-details-page">
         <div class="detail-l-sec">
+
+        <?php
+            $getproduct = $pd->getsingleproduct($id);
+            if ($getproduct) {
+                while ($result = $getproduct->fetch_assoc()) {
+        ?>
+
             <div class="main-img">
-                <img src="assets/img-1.png" id="mainimg">
+                <img src="admin/<?php echo $result['image']; ?>" id="mainimg">
             </div>
             <div class="images">
-                <img src="assets/img-2.png" class="smallimg">
-                <img src="assets/img-3.png" class="smallimg">
-                <img src="assets/sliderimg-1.png" class="smallimg">
-                <img src="assets/img-5.png" class="smallimg">
-                <img src="assets/img-1.png" class="smallimg">
+                <img src="admin/<?php echo $result['image']; ?>" class="smallimg">
+                <img src="admin/<?php echo $result['image']; ?>" class="smallimg">
+                <img src="admin/<?php echo $result['image']; ?>" class="smallimg">
+                <img src="admin/<?php echo $result['image']; ?>" class="smallimg">
+                <img src="admin/<?php echo $result['image']; ?>" class="smallimg">
             </div>
         </div>
         <div class="detail-r-sec">
-            <h2>Bangladeshi Wedding Neckless</h2>
+            <h2><?php echo $result['productName']; ?></h2>
 
             <div class="rating">
                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -26,31 +46,34 @@
             </div>
 
             <div class="price">
-                <h2>৳ 4,500 Tk</h2>
+                <h2>৳ <?php echo $result['price']; ?> Tk</h2>
             </div>
 
             <div class="details">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsam vero modi temporibus accusamus nobis tempore quod quia perferendis consequatur ipsa culpa excepturi ad obcaecati a libero iure fugit corporis dolor commodi exercitationem, earum tenetur sed ea? Deserunt, rem consequuntur.</p>
+                <p><?php echo $result['body']; ?></p>
             </div>
 
-            <div class="cat">
-                <span>Category</span>
-                <h4>Gold Plate</h4>
-            </div>
-
-            <div class="quantity">
-                <span>Quantity</span>
-                <div class="number">
-                    <input type="number" max="5" min="1">
+            <form action="" method="post">
+                <div class="cat">
+                    <span>Category</span>
+                    <h4><?php echo $result['catName']; ?></h4>
+                    <input type="hidden" name="category" value="<?php echo $result['catName']; ?>">
                 </div>
-            </div>
 
-            <div class="action-button">
-                <form action="" method="post">
-                    <input type="submit" value="Add to wishlist">
+                <div class="quantity">
+                    <span>Quantity</span>
+                    <div class="number">
+                        <input type="number" name="quantity" max="5" min="1">
+                    </div>
+                </div>
+
+                <div class="action-button">
                     <input type="submit" value="Add to cart">
-                </form>
-            </div>
+                </div>
+            </form>
+
+        <?php } } ?>
+
         </div>
     </div>
 </div>

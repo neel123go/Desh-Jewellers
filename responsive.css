@@ -120,6 +120,9 @@
     .cart-page table .cart-content td:nth-child(2){
         display:none;
     }
+    .cart-page table .cart-content{
+        position: relative;
+    }
     .cart-page table tr td input{
         width: 80px;
         padding: 5px 10px;
@@ -131,18 +134,43 @@
         padding: 0 5px;
         font-size: 20px;
     }
+    .cart-page table tr td .text p{
+        display: inline-grid;
+        width: 240%;
+    }
+    .cart-page table tr td .text small{
+        width: 240%;
+        display: block;
+    }
     .cart-page table tr td:nth-child(4){
         margin-bottom: 20px;
+        bottom: 0;
+        right: 0;
+        position: absolute;
     }
     .cart-page table tr td:nth-child(4) span{
         display: block;
     }
-    .cart-page .total-price table tr{
-        display: flex;
-        justify-content: space-between;
+    
+
+
+    .cart-page table tr td:nth-child(3){
+        display: block;
+        text-align: right;
     }
-    .cart-page .total-price table td{
-        padding: 5px 0 5px 0px;
+    .cart-page table tr td:nth-child(3) input[type="submit"]{
+        margin-top: 10px;
+        text-align: left    ;
+    }
+    .cart-page .total-price .main-section-total {
+        max-width: 700px;
+        padding-top: 10px;
+    }
+    .cart-page .total-price h3{
+        margin: 5px 0;
+    }
+    .cart-page .total-price span{
+        margin: 5px 0;
     }
     .pro-details-page{
         margin: 20px 15px;
@@ -411,19 +439,6 @@
     .cart-page table tr td:nth-child(4) span{
         display: inline-block;
     }
-    .cart-page .total-price table tr{
-        display: flex;
-        justify-content: space-between;
-    }
-    .cart-page .total-price table td{
-        padding: 5px 0 5px 0px;
-    }
-    .cart-page table tr td {
-        display: table-cell;
-    }
-    .cart-page .total-price table{
-        max-width: 350px;
-    }
 }
 
 @media (min-width: 750px) and (max-width: 915px){
@@ -467,19 +482,6 @@
     .cart-page table tr td:nth-child(4) span{
         display: inline-block;
     }
-    .cart-page .total-price table tr{
-        display: flex;
-        justify-content: space-between;
-    }
-    .cart-page .total-price table td{
-        padding: 5px 0 5px 0px;
-    }
-    .cart-page table tr td {
-        display: table-cell;
-    }
-    .cart-page .total-price table{
-        max-width: 415px;
-    }
 }
 
 /* EXTRA CART PAGE RESPONSIVE END */
@@ -516,15 +518,7 @@
     .cart-page table tr td:nth-child(4) span{
         display: inline-block;
     }
-    .cart-page .total-price table td{
-        padding: 5px 0 5px 0px;
-    }
-    .cart-page table tr td {
-        display: table-cell;
-    }
-    .cart-page .total-price table{
-        max-width: 100%;
-    }
+    
 }
 
 
@@ -675,6 +669,16 @@
     .pro-details-page .detail-l-sec .images img{
         width: 84px;
         height: 85px;
+    }
+    .cart-page .total-price .main-section-total {
+        max-width: 700px;
+        padding-top: 10px;
+    }
+    .cart-page .total-price h3{
+        margin: 5px 0;
+    }
+    .cart-page .total-price span{
+        margin: 5px 0;
     }
     .notfound{
         margin: 40px 30px;
@@ -921,6 +925,12 @@
         width: 100px;
         height: 100px;
     }
+    .cart-page{
+        margin: 50px 30px;
+    }
+    .cart-page .total-price .main-section-total{
+        max-width: 390px;
+    }
     .notfound{
         margin: 40px 30px;
     }
@@ -1039,8 +1049,6 @@
     .header .header-top .icon .login p{
         display: none;
     }
-
-
     .container{
         width: auto;
         justify-content: space-between;
@@ -1108,6 +1116,12 @@
     .pro-details-page .detail-l-sec .images img{
         width: 80px;
         height: 80px;
+    }
+    .cart-page{
+        margin: 50px 30px;
+    }
+    .cart-page .total-price .main-section-total{
+        max-width: 440px;
     }
     .notfound{
         margin: 40px 30px;
@@ -1334,6 +1348,12 @@
     footer .main-content .right form input[type="text"], form textarea{
         padding: 10px 10px
     }
+    .cart-page{
+        margin: 50px 30px;
+    }
+    .cart-page .total-price .main-section-total{
+        max-width: 490px;
+    }
 }
 
 
@@ -1448,6 +1468,12 @@
     footer .main-content .center .text{
         font-size: 14px;
     }
+    .cart-page{
+        margin: 50px 60px;
+    }
+    .cart-page .total-price .main-section-total{
+        max-width: 500px;
+    }
 }
 
 
@@ -1560,6 +1586,12 @@
     footer .main-content .box{
         padding: 20px 10px;
     }
+    .cart-page{
+        margin: 50px 75px;
+    }
+    .cart-page .total-price .main-section-total{
+        max-width: 540px;
+    }
 }
 
 
@@ -1661,6 +1693,12 @@
     }
     footer .main-content .box{
         padding: 20px 10px;
+    }
+    .cart-page{
+        margin: 50px 65px;
+    }
+    .cart-page .total-price .main-section-total{
+        max-width: 580px;
     }
 }
 

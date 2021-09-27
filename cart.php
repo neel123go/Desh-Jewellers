@@ -9,84 +9,70 @@
                 <th>Price</th>
             </tr>
 
-            <tr class="cart-content">
-                <td>
-                    <div class="cart-info">
-                        <img src="assets/img-1.png">
-                        <div class="text">
-                            <p>wedding Necless</p>
-                            <small>Price: 2000 Tk</small>
-                            <br>
-                            <a href="#">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td>Gold Plate</td>
-                <td>
-                    <input type="number" min="1" max="5">
-                    <input type="submit" value="Update">
-                </td>
-                <td><span>Price: </span>৳ 2000 Tk</td>
-            </tr>
+        <?php 
+            $getpro = $ct->getcartpro();
+            if ($getpro) {
+                $sum = 0;
+                while ($result = $getpro->fetch_assoc()) {
+        ?>
 
             <tr class="cart-content">
                 <td>
                     <div class="cart-info">
-                        <img src="assets/img-2.png">
+                        <img src="admin/<?php echo $result['image']; ?>">
                         <div class="text">
-                            <p>Choker</p>
-                            <small>Price: 35,000 Tk</small>
+                            <p><?php echo $result['productName']; ?></p>
+                            <small>Price: <?php echo $result['price']; ?> Tk</small>
                             <br>
                             <a href="#">Remove</a>
                         </div>
                     </div>
                 </td>
-                <td>Gold</td>
+                <td><?php echo $result['categoryName']; ?></td>
                 <td>
-                    <input type="number" min="1" max="5">
+                    <input type="number" value="<?php echo $result['quantity']; ?>" min="1" max="5">
                     <input type="submit" value="Update">
                 </td>
-                <td><span>Price: </span>৳ 35,000 Tk</td>
+                <td><span>Price: </span>৳ <?php 
+                                            $total = $result['price'] * $result['quantity'];
+                                            echo $total; 
+                                        ?> Tk</td>
             </tr>
+            
+        <?php
+            $sum = $sum + $total;
+        } } else { ?>
 
-            <tr class="cart-content">
-                <td>
-                    <div class="cart-info">
-                        <img src="assets/img-3.png">
-                        <div class="text">
-                            <p>Banggle</p>
-                            <small>Price: 20,500 Tk</small>
-                            <br>
-                            <a href="#">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td>Daimond</td>
-                <td>
-                    <input type="number" min="1" max="5">
-                    <input type="submit" value="Update">
-                </td>
-                <td><span>Price: </span>৳ 20,500 Tk</td>
-            </tr>
+        <div class="empty">
+            <h4>Your cart is currently empty.</h4>
+            <a href="index.php">Continue Shoping</a>
+        </div>
+
+        <?php } ?>
+
         </table>
 
         <div class="total-price">
-            <table>
-                <tr>
-                    <td>Subtotal:</td>
-                    <td class="highlight">৳ 57,500 Tk</td>
-                </tr>
-
-                <tr>
-                    <td>Vat:</td>
-                    <td class="highlight">৳ 10 Tk</td>
-                </tr>
-
-                <tr>
-                    <td>Total Price:</td>
-                    <td class="highlight">৳ 57,510 Tk</td>
-                </tr>
-            </table>
+            <div class="main-section-total">
+                <div class="text12">
+                    <h3>sub total: </h3>
+                    <span>৳ <?php echo $sum; ?> Tk</span>
+                </div>
+                
+                <div class="text12">
+                    <h3>vat : </h3>
+                    <span>৳ 10 Tk</span>
+                </div>
+                
+                <div class="text12">
+                    <h3>total : </h3>
+                    <span>৳ <?php
+                            $vat = $sum + 10;
+                            echo $vat;
+                        ?> Tk
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 
