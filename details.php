@@ -70,6 +70,14 @@
                 <div class="action-button">
                     <input type="submit" value="Add to cart">
                 </div>
+
+                <span style="color:red; margin-top:20px; text-transform: none;">
+                    <?php
+                        if (isset($addtocart)) {
+                            echo $addtocart;
+                        }
+                    ?>
+                </span>
             </form>
 
         <?php } } ?>

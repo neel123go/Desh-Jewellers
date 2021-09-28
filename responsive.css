@@ -929,7 +929,7 @@
         margin: 50px 30px;
     }
     .cart-page .total-price .main-section-total{
-        max-width: 390px;
+        max-width: 410px;
     }
     .notfound{
         margin: 40px 30px;
@@ -1121,7 +1121,13 @@
         margin: 50px 30px;
     }
     .cart-page .total-price .main-section-total{
-        max-width: 440px;
+        max-width: 460px;
+    }
+    .cart-page .total-price h3{
+        margin: 5px 0;
+    }
+    .cart-page .total-price span{
+        margin: 5px 0;
     }
     .notfound{
         margin: 40px 30px;
@@ -1352,7 +1358,13 @@
         margin: 50px 30px;
     }
     .cart-page .total-price .main-section-total{
-        max-width: 490px;
+        max-width: 510px;
+    }
+    .cart-page .total-price h3{
+        margin: 5px 0;
+    }
+    .cart-page .total-price span{
+        margin: 5px 0;
     }
 }
 
@@ -1472,7 +1484,7 @@
         margin: 50px 60px;
     }
     .cart-page .total-price .main-section-total{
-        max-width: 500px;
+        max-width: 520px;
     }
 }
 
@@ -1590,7 +1602,7 @@
         margin: 50px 75px;
     }
     .cart-page .total-price .main-section-total{
-        max-width: 540px;
+        max-width: 560px;
     }
 }
 
@@ -1698,7 +1710,7 @@
         margin: 50px 65px;
     }
     .cart-page .total-price .main-section-total{
-        max-width: 580px;
+        max-width: 620px;
     }
 }
 
@@ -1756,5 +1768,8 @@
     .slider .wrapper .carousel .card img{
         width: 230px;
         height: auto;
+    }
+    .cart-page .total-price .main-section-total{
+        max-width: 630px;
     }
 }

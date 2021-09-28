@@ -1,5 +1,18 @@
 <?php include 'inc/header.php'; ?>
+<?php
+    if (isset($_GET['delid'])) {
+        $id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['delid']);
+        $delcart = $ct->deletecart($id);
+    }
 
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		$quantity = $_POST['quantity'];
+        $cartId = $_POST['cartId'];
+		$updatecart = $ct->updatecartquantity($quantity, $cartId);
+	}
+?>
+
+    
     <div class="cart-page">
         <table>
             <tr>
@@ -24,14 +37,17 @@
                             <p><?php echo $result['productName']; ?></p>
                             <small>Price: <?php echo $result['price']; ?> Tk</small>
                             <br>
-                            <a href="#">Remove</a>
+                            <a onclick="return confirm('Are you sure to delete this product ?')" href="?delid=<?php echo $result['cartId']; ?>">Remove</a>
                         </div>
                     </div>
                 </td>
                 <td><?php echo $result['categoryName']; ?></td>
                 <td>
-                    <input type="number" value="<?php echo $result['quantity']; ?>" min="1" max="5">
-                    <input type="submit" value="Update">
+                    <form action="" method="post">
+                        <input type="hidden" name="cartId" value="<?php echo $result['cartId']; ?>">
+                        <input type="number" name="quantity" value="<?php echo $result['quantity']; ?>" min="1" max="5">
+                        <input type="submit" value="Update">
+                    </form>
                 </td>
                 <td><span>Price: </span>৳ <?php 
                                             $total = $result['price'] * $result['quantity'];
