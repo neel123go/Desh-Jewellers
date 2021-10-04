@@ -67,6 +67,13 @@
             $delcart = $this->db->delete($query);
         }
 
+        public function checkcarttable(){
+            $sid = session_id();
+            $query = "SELECT * FROM tbl_cart WHERE sId = '$sid'";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
 
     }
 ?>

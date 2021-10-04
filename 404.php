@@ -1,14 +1,20 @@
 <?php include 'inc/header.php'; ?>
-    <div class="notfound">
-        <div class="main-content">
-            <h2>404</h2>
+
+    <div class="error-page">
+        <div class="error-page-content">
+            <div class="number">
+                <h3>404</h3>
+            </div>
 
             <div class="text">
-                <h3>Oops...</h3>
+                <h4>Oops..</h4>
                 <p>The page you are looking for doesn't exist</p>
             </div>
 
-            <a href="index.php">Go To Home</a>
+            <div class="btn">
+                <a href="#">Go To Home</a>
+            </div>
         </div>
     </div>
+
 <?php include 'inc/footer.php'; ?>

@@ -13,6 +13,7 @@
     $fm = new Format();
     $pd = new Product();
     $ct = new Cart();
+    $cat = new Category();
 ?>
 
 <?php
@@ -64,6 +65,7 @@
                     <a href="wishlist.php">
                         <div class="wishlist">
                             <i class="fa fa-heart-o"></i>
+                            <small>(0)</small>
                             <p> wishlist</p>
                         </div>
                     </a>
@@ -71,6 +73,16 @@
                     <a href="cart.php">
                         <div class="cart">
                             <img src="assets/carticon.png">
+                            <small><?php
+                                    $getdata = $ct->checkcarttable();
+                                    if ($getdata) {
+                                        $cartnum = session::get("i");
+                                        echo $cartnum;
+                                    } else {
+                                        echo "(0)";
+                                    }
+                                    
+                                ?></small>
                             <p> My cart</p>
                         </div>
                     </a>
@@ -91,47 +103,50 @@
                             <label for="btn" class="button"><span class="fa fa-list listicon"></span>category<span class="fa fa-caret-down arrowicon"></span>
                             </label>
                             <input type="checkbox" id="btn">
-        
+            
                             <ul class="menu">
-        
+
+            
+
                                 <li>
-                                    <label for="btn-1" class="first">daimond
+                                    <label for="btn-1" class="first">Gold
                                         <span class="fa fa-caret-down"></span>
                                     </label>
                                     <input type="checkbox" id="btn-1">
+                                   
                                     <ul>
-                                        <li><a href="">ring</a></li>
-                                        <li><a href="">neckless</a></li>
-                                        <li><a href="">blaeslets</a></li>
-                                        <li><a href="">banggles</a></li>
+            <?php
+                $getgoldcart = $cat->getgoldcart();
+                if ($getgoldcart) {
+                    while ($result = $getgoldcart->fetch_assoc()) {
+            ?>
+                                        <li><a href="product.php?categoryid=<?php echo $result['catId']; ?>"><?php echo $result['subcatName']; ?></a></li>
+
+            <?php } } ?>
+
                                     </ul>
                                 </li>
-        
+
                                 <li>
-                                    <label for="btn-2" class="first">gold
+                                    <label for="btn-2" class="first">Gold Plate
                                         <span class="fa fa-caret-down"></span>
                                     </label>
                                     <input type="checkbox" id="btn-2">
+                                   
                                     <ul>
-                                        <li><a href="">ring</a></li>
-                                        <li><a href="">neckless</a></li>
-                                        <li><a href="">blaeslets</a></li>
-                                        <li><a href="">banggles</a></li>
+            <?php
+                $getgoldplatecart = $cat->getgoldplatecart();
+                if ($getgoldplatecart) {
+                    while ($result = $getgoldplatecart->fetch_assoc()) {
+            ?>
+                                        <li><a href="product.php?categoryid=<?php echo $result['catId']; ?>"><?php echo $result['subcatName']; ?></a></li>
+
+            <?php } } ?>
+
                                     </ul>
                                 </li>
-        
-                                <li>
-                                    <label for="btn-3" class="first">glod plate
-                                        <span class="fa fa-caret-down"></span>
-                                    </label>
-                                    <input type="checkbox" id="btn-3">
-                                    <ul>
-                                        <li><a href="">ring</a></li>
-                                        <li><a href="">neckless</a></li>
-                                        <li><a href="">blaeslets</a></li>
-                                        <li><a href="">banggles</a></li>
-                                    </ul>
-                                </li>
+
+
                             </ul>
                         </nav>
                     </div>

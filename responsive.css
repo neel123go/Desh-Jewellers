@@ -151,9 +151,6 @@
     .cart-page table tr td:nth-child(4) span{
         display: block;
     }
-    
-
-
     .cart-page table tr td:nth-child(3){
         display: block;
         text-align: right;
@@ -171,6 +168,14 @@
     }
     .cart-page .total-price span{
         margin: 5px 0;
+    }
+    .empty h4{
+        font-size: 16px;
+    }
+    .empty a{
+        width: 250px;
+        padding: 10px 20px;
+        font-size: 20px;
     }
     .pro-details-page{
         margin: 20px 15px;
@@ -206,30 +211,7 @@
         font-size: 16px;
         padding: 10px 20px;
     }
-    .notfound{
-        margin: 20px 15px;
-        height: 80vh;
-    }
-    .notfound .main-content h2{
-        font-size: 20vh;
-        color: #f88783;
-    }
-    .notfound .main-content .text{
-        width: 200px;
-    }
-    .notfound .main-content h3{
-        font-size: 4.1vh;
-        margin-top: 15px;
-    }
-    .notfound .main-content p{
-        font-size: 2.8vh;
-        width: 310px;
-        color: #17303b;
-    }
-    .notfound .main-content a:hover{
-        background: #fa7772;
-        padding: 10px 40px;
-    }
+    
     .wishlist-page table th{
         display: none;
     }
@@ -323,7 +305,23 @@
         margin-right: 15px;
         margin-top: 20px;
     }
-    
+    .error-page .error-page-content .number h3{
+        font-size: 150px;
+    }
+    .error-page .error-page-content .text h4{
+        font-size: 25px;
+        width: 35%;
+    }
+    .error-page .error-page-content .text p{
+        font-size: 13px;
+        width: 65%;
+    }
+    .error-page .error-page-content .btn a{
+        font-size: 18px;
+    }
+    .error-page .error-page-content .btn a:hover{
+        padding: 10px 64px;
+    }
 }
 
 /* SIGNUP EXTRA RESPONSIVE START */
@@ -680,28 +678,13 @@
     .cart-page .total-price span{
         margin: 5px 0;
     }
-    .notfound{
-        margin: 40px 30px;
+    .empty h4{
+        font-size: 16px;
     }
-    .notfound .main-content h2{
-        font-size: 30vh;
-        color: #f88783;
-    }
-    .notfound .main-content .text{
-        width: 300px;
-    }
-    .notfound .main-content h3{
-        font-size: 4.5vh;
-        margin-top: 15px;
-    }
-    .notfound .main-content p{
-        font-size: 3.2vh;
-        width: 400px;
-        color: #17303b;
-    }
-    .notfound .main-content a:hover{
-        background: #fa7772;
-        padding: 10px 80px;
+    .empty a{
+        width: 350px;
+        padding: 10px 30px;
+        font-size: 20px;
     }
     .wishlist-page table th{
         display: none;
@@ -797,6 +780,23 @@
     footer .bottom .link a{
         margin-right: 15px;
         margin-top: 20px;
+    }
+    .error-page .error-page-content .number h3{
+        font-size: 150px;
+    }
+    .error-page .error-page-content .text h4{
+        font-size: 25px;
+        width: 35%;
+    }
+    .error-page .error-page-content .text p{
+        font-size: 13px;
+        width: 65%;
+    }
+    .error-page .error-page-content .btn a{
+        font-size: 18px;
+    }
+    .error-page .error-page-content .btn a:hover{
+        padding: 10px 64px;
     }
 }
 
@@ -931,9 +931,6 @@
     .cart-page .total-price .main-section-total{
         max-width: 410px;
     }
-    .notfound{
-        margin: 40px 30px;
-    }
     .wishlist-page{
         margin: 30px 30px;
     }
@@ -994,6 +991,23 @@
     }
     footer .main-content .right form input[type="text"], form textarea{
         padding: 10px 10px
+    }
+    .error-page .error-page-content .number h3{
+        font-size: 150px;
+    }
+    .error-page .error-page-content .text h4{
+        font-size: 35px;
+        width: 35%;
+    }
+    .error-page .error-page-content .text p{
+        font-size: 18px;
+        width: 65%;
+    }
+    .error-page .error-page-content .btn a{
+        font-size: 18px;
+    }
+    .error-page .error-page-content .btn a:hover{
+        padding: 10px 130px;
     }
 }
 
@@ -1129,9 +1143,6 @@
     .cart-page .total-price span{
         margin: 5px 0;
     }
-    .notfound{
-        margin: 40px 30px;
-    }
     .wishlist-page{
         margin: 30px 30px;
     }
@@ -1189,6 +1200,23 @@
     }
     footer .main-content .right form input[type="text"], form textarea{
         padding: 10px 10px
+    }
+    .error-page .error-page-content .number h3{
+        font-size: 150px;
+    }
+    .error-page .error-page-content .text h4{
+        font-size: 35px;
+        width: 35%;
+    }
+    .error-page .error-page-content .text p{
+        font-size: 18px;
+        width: 65%;
+    }
+    .error-page .error-page-content .btn a{
+        font-size: 18px;
+    }
+    .error-page .error-page-content .btn a:hover{
+        padding: 10px 140px;
     }
 }
 
@@ -1311,9 +1339,6 @@
         width: 80px;
         height: 80px;
     }
-    .notfound{
-        margin: 40px 30px;
-    }
     .wishlist-page{
         margin: 30px 30px;
     }
@@ -1365,6 +1390,15 @@
     }
     .cart-page .total-price span{
         margin: 5px 0;
+    }
+    .error-page .error-page-content .number h3{
+        font-size: 150px;
+    }
+    .error-page .error-page-content .text h4{
+        font-size: 30px;
+    }
+    .error-page .error-page-content .text p{
+        font-size: 18px;
     }
 }
 
@@ -1464,9 +1498,6 @@
     }
     .pro-details-page .detail-r-sec{
         padding: 0px 20px;
-    }
-    .notfound{
-        margin: 40px 60px;
     }
     .wishlist-page{
         margin: 50px 60px;

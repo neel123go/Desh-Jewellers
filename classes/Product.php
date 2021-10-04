@@ -216,7 +216,7 @@
     }
 
     public function newpd(){
-        $query = "SELECT * FROM tbl_product WHERE type='0' ORDER BY productId LIMIT 4";
+        $query = "SELECT * FROM tbl_product WHERE type='0' ORDER BY productId DESC LIMIT 8";
         $result = $this->db->select($query);
         return $result;
     }
@@ -235,6 +235,12 @@
         return $result;
     }
 
+    public function getprobycat($id){
+        $catId = mysqli_real_escape_string($this->db->link, $id);
+        $query = "SELECT * FROM tbl_product WHERE subcatId = '$catId'";
+        $result = $this->db->select($query);
+        return $result;
+    }
 
 
 

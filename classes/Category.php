@@ -158,6 +158,23 @@
             }
         }
 
+        public function getgoldcart(){
+            $name = "Gold";
+            $query = "SELECT * FROM tbl_sub_category WHERE maincatName='$name' ORDER BY catId";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+        public function getgoldplatecart(){
+            $name = "GoldPlate";
+            $query = "SELECT * FROM tbl_sub_category WHERE maincatName='$name' ORDER BY catId";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+
+
+
 
 
 

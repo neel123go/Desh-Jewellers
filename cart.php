@@ -10,9 +10,17 @@
         $cartId = $_POST['cartId'];
 		$updatecart = $ct->updatecartquantity($quantity, $cartId);
 	}
+
+    if (!isset($_GET['id'])) {
+        echo "<meta http-equiv='refresh' content='0;URL=?id=live'>";
+    }
 ?>
 
-    
+<?php
+    $getdata = $ct->checkcarttable();
+    if ($getdata) {
+?>
+
     <div class="cart-page">
         <table>
             <tr>
@@ -22,12 +30,14 @@
                 <th>Price</th>
             </tr>
 
-        <?php 
-            $getpro = $ct->getcartpro();
-            if ($getpro) {
-                $sum = 0;
-                while ($result = $getpro->fetch_assoc()) {
-        ?>
+    <?php 
+        $getpro = $ct->getcartpro();
+        if ($getpro) {
+            $i = 0;
+            $sum = 0;
+            while ($result = $getpro->fetch_assoc()) {
+                $i++;
+    ?>  
 
             <tr class="cart-content">
                 <td>
@@ -57,14 +67,9 @@
             
         <?php
             $sum = $sum + $total;
-        } } else { ?>
-
-        <div class="empty">
-            <h4>Your cart is currently empty.</h4>
-            <a href="index.php">Continue Shoping</a>
-        </div>
-
-        <?php } ?>
+            Session::set("i", $i);
+        ?>
+        <?php } } ?>
 
         </table>
 
@@ -90,6 +95,15 @@
                 </div>
             </div>
         </div>
+
     </div>
+
+<?php } else { ?>
+    <div class="empty">
+        <h4>Your cart is currently empty.</h4>
+        <a href="index.php">Continue Shoping</a>
+    </div>
+<?php } ?>
+
 
 <?php include 'inc/footer.php'; ?>

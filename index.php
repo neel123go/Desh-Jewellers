@@ -1,5 +1,27 @@
 <?php include 'inc/header.php'; ?>
-<?php include 'inc/slider.php'; ?>
+
+    <!-- STRAT SLIDER PART -->
+    <h2 class="slider-heading"><span>Explore</span> The New Arrivals</h2>
+    <section class="slider">
+        <div class="bodycontainer">
+            <div class="wrapper">
+                <div class="carousel owl-carousel">
+
+            <?php
+                $getnewpd = $pd->newpd();
+                if ($getnewpd) {
+                    while ($result = $getnewpd->fetch_assoc()) {
+            ?>
+
+                    <a href="details.php?proid=<?php echo $result['productId']; ?>"><div class="card"><img src="admin/<?php echo $result['image']; ?>"></div></a>
+
+            <?php } } ?>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SLIDER PART -->
 
     <section class="best-sales" id="bestsale">
         <div class="bodycontainer">
@@ -175,7 +197,7 @@
             </div>
             
             <div class="btn">
-                <a href="#">show more</a>
+                <a href="product.php">show more</a>
             </div>
         </div>
     </section>
