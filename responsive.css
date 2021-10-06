@@ -380,9 +380,47 @@
         padding: 0 40px;
     }
 }
+@media (min-width: 320px) and (max-width: 369px){
+    .signupform .container form .button{
+        display: grid;
+        width: 100%;
+        justify-content: unset;
+    }
+    .signupform .container form input[type="submit"]:nth-child(1) {
+        font-size: 18px;
+        width: 100%;
+    }
+    .signupform .container form input[type="submit"]:nth-child(2) {
+        font-size: 18px;
+        width: 100%;
+    }
+    .signupform .container form .button a {
+        font-size: 18px;
+        width: 100%;
+        padding: 8px 0;
+    }
+}
 @media (min-width: 370px) and (max-width: 399px){
     .products .wrapper{
         padding: 0 60px;
+    }
+    .signupform .container form .button{
+        display: grid;
+        width: 100%;
+        justify-content: unset;
+    }
+    .signupform .container form input[type="submit"]:nth-child(1) {
+        font-size: 18px;
+        width: 100%;
+    }
+    .signupform .container form input[type="submit"]:nth-child(2) {
+        font-size: 18px;
+        width: 100%;
+    }
+    .signupform .container form .button a {
+        font-size: 18px;
+        width: 100%;
+        padding: 8px 0;
     }
 }
 @media (min-width: 400px) and (max-width: 629px){
@@ -391,6 +429,18 @@
     }
     .products .wrapper .carousel2 .card{
         margin: 0 3px;
+    }
+    .signupform .container form input[type="submit"]:nth-child(1) {
+        font-size: 18px;
+        width: 23%;
+    }
+    .signupform .container form input[type="submit"]:nth-child(2) {
+        font-size: 18px;
+        width: 52%;
+    }
+    .signupform .container form .button a {
+        font-size: 18px;
+        width: 23%;
     }
 }
 
@@ -436,6 +486,12 @@
     }
     .cart-page table tr td:nth-child(4) span{
         display: inline-block;
+    }
+    .signupform .container form input[type="submit"] {
+        font-size: 18px;
+    }
+    .signupform .container form .button a {
+        font-size: 18px;
     }
 }
 
@@ -483,6 +539,7 @@
 }
 
 /* EXTRA CART PAGE RESPONSIVE END */
+
 
 @media  (min-width: 481px) and (max-width: 749px){
     .cart-page{
@@ -588,7 +645,7 @@
         color: rgba(44, 44, 44, 0.822);
     }
     .header .header-top .icon .cart{
-        margin-right: 200px;
+        margin-right: 193px;
     }
     .header .header-top .icon .cart img{
         width: 34px;
@@ -596,8 +653,8 @@
     }
     .header .header-top .icon .login img{
         display: block;
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
     .header .header-top .icon .login p{
         display: none;
@@ -845,8 +902,8 @@
     }
     .header .header-top .icon .login img{
         display: block;
-        width: 25px;
-        height: 25px;
+        width: 35px;
+        height: 35px;
     }
     .header .header-top .icon .login p{
         display: none;
@@ -1057,8 +1114,8 @@
     }
     .header .header-top .icon .login img{
         display: block;
-        width: 25px;
-        height: 25px;
+        width: 35px;
+        height: 35px;
     }
     .header .header-top .icon .login p{
         display: none;
@@ -1267,6 +1324,11 @@
     .header .header-top .icon .login p{
         font-size: 18px;
     }
+    .header .header-top .icon .login img{
+        display: block;
+        width: 35px;
+        height: 35px;
+    }
 
     .container{
         width: auto;
@@ -1448,6 +1510,11 @@
     .header .header-top .icon .login p{
         font-size: 18px;
     }
+    .header .header-top .icon .login img{
+        display: block;
+        width: 35px;
+        height: 35px;
+    }
     .container{
         width: auto;
         justify-content: space-between;
@@ -1566,6 +1633,11 @@
     .header .header-top .icon .login p{
         font-size: 18px;
     }
+    .header .header-top .icon .login img{
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
     header .header-bottom nav ul{
         top: 70px;
     }
@@ -1677,6 +1749,11 @@
     .header .header-top .icon .cart img{
         width: 33px;
     }
+    .header .header-top .icon .login img{
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
     header .header-bottom nav ul{
         top: 73px;
     }
@@ -1784,6 +1861,11 @@
     }
     header .header-bottom .navbar li a{
         font-size: 16px;
+    }
+    .header .header-top .icon .login img{
+        display: block;
+        width: 40px;
+        height: 40px;
     }
     .bodycontainer{
         width: 100%;

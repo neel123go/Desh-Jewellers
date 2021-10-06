@@ -14,6 +14,7 @@
     $pd = new Product();
     $ct = new Cart();
     $cat = new Category();
+    $cmr = new Customer();
 ?>
 
 <?php
@@ -73,23 +74,31 @@
                     <a href="cart.php">
                         <div class="cart">
                             <img src="assets/carticon.png">
-                            <small><?php
+                            <small>(<?php
                                     $getdata = $ct->checkcarttable();
                                     if ($getdata) {
                                         $cartnum = session::get("i");
                                         echo $cartnum;
                                     } else {
-                                        echo "(0)";
+                                        echo "0";
                                     }
                                     
-                                ?></small>
+                                ?>)</small>
                             <p> My cart</p>
                         </div>
                     </a>
 
                     <div class="login">
-                        <a href="login.php"><img src="assets/user (1).png" alt=""></a>
-                        <p><a href="login.php">Login</a> / <a href="signup.php">Sign Up</a></p>
+
+            <?php
+                $login = session::get("login");
+                if ($login == true) { ?>
+                    <a href="profile.php"><img src="assets/account.png"></a>
+            <?php } else { ?>
+                    <a href="login.php"><img src="assets/account.png"></a>
+            <?php } ?>
+
+
                     </div>
                 </div>
             </div>

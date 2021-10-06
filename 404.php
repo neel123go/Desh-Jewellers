@@ -12,7 +12,7 @@
             </div>
 
             <div class="btn">
-                <a href="#">Go To Home</a>
+                <a href="index.php">Go To Home</a>
             </div>
         </div>
     </div>

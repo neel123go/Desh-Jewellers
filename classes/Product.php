@@ -209,43 +209,39 @@
                 }
             }
 
-    public function bestsalepd(){
-        $query = "SELECT * FROM tbl_product WHERE type='1' ORDER BY productId LIMIT 4";
-        $result = $this->db->select($query);
-        return $result;
-    }
+        public function bestsalepd(){
+            $query = "SELECT * FROM tbl_product WHERE type='1' ORDER BY productId LIMIT 4";
+            $result = $this->db->select($query);
+            return $result;
+        }
 
-    public function newpd(){
-        $query = "SELECT * FROM tbl_product WHERE type='0' ORDER BY productId DESC LIMIT 8";
-        $result = $this->db->select($query);
-        return $result;
-    }
+        public function newpd(){
+            $query = "SELECT * FROM tbl_product WHERE type='0' ORDER BY productId DESC LIMIT 8";
+            $result = $this->db->select($query);
+            return $result;
+        }
 
-    public function loadallproduct(){
-        $query = "SELECT * FROM tbl_product ORDER BY productId";
-        $result = $this->db->select($query);
-        return $result;
-    }
+        public function loadallproduct(){
+            $query = "SELECT * FROM tbl_product ORDER BY productId";
+            $result = $this->db->select($query);
+            return $result;
+        }
 
-    public function getsingleproduct($id){
-        $query = "SELECT p.*, c.catName
-                    FROM tbl_product as p, tbl_main_category as c
-                    WHERE p.catId = c.catId AND p.productId = '$id'";
-        $result = $this->db->select($query);
-        return $result;
-    }
+        public function getsingleproduct($id){
+            $query = "SELECT p.*, c.catName
+                        FROM tbl_product as p, tbl_main_category as c
+                        WHERE p.catId = c.catId AND p.productId = '$id'";
+            $result = $this->db->select($query);
+            return $result;
+        }
 
-    public function getprobycat($id){
-        $catId = mysqli_real_escape_string($this->db->link, $id);
-        $query = "SELECT * FROM tbl_product WHERE subcatId = '$catId'";
-        $result = $this->db->select($query);
-        return $result;
-    }
-
-
-
-
-
+        public function getprobycat($id){
+            $catId = mysqli_real_escape_string($this->db->link, $id);
+            $query = "SELECT * FROM tbl_product WHERE subcatId = '$catId'";
+            $result = $this->db->select($query);
+            return $result;
+            
+        }
 
 
     }

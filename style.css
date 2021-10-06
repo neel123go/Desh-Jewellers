@@ -19,6 +19,16 @@ a{
 .color-change{
     color: #cea45f;
 }
+.error{
+    color: #fc4d2a;
+    text-transform: none;
+    font-size: 18px;
+}
+.success{
+    font-size: 18px;
+    text-transform: none;
+    color: rgb(0, 190, 79);
+}
 
 /* Style Scrool Bar */
 
@@ -132,7 +142,9 @@ header .header{
     color: #cea45f;
 }
 .header .header-top .icon .login img{
-    display: none;
+    display: block;
+    width: 30px;
+    height: 30px;
 }
 header .header-bottom .sec-header .category nav{
     position: absolute;
@@ -789,6 +801,7 @@ footer .bottom .link a:last-child{
     font-size: 25px;
     font-weight: 500;
     position: relative;
+    margin-bottom: 50px;
 }
 .signupform .title::before{
     content: '';
@@ -807,7 +820,7 @@ footer .bottom .link a:last-child{
     font-family: 'Ubuntu', sans-serif;
 }
 .signupform .container form{
-    margin-top: 70px;
+    margin-top: 20px;
 }
 .signupform .container form .user-details{
     display: flex;
@@ -867,9 +880,14 @@ footer .bottom .link a:last-child{
 .signupform .container form .user-details .button, .forget, .account{
     width: 100%;
 }
-.signupform .container form input[type="submit"]{
-    height: 40px;
+.signupform .container form .button{
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+}
+.signupform .container form input[type="submit"] {
+    height: 40px;
+    width: 32%;
     outline: none;
     border: none;
     border-radius: 5px;
@@ -878,6 +896,19 @@ footer .bottom .link a:last-child{
     background: linear-gradient(to right, #f0b455, #eeb965);
     color: #fff;
     cursor: pointer;
+}
+.signupform .container form .button a {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 21px;
+    background: linear-gradient(to right, #f0b455, #eeb965);
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    width: 32%;
+    margin-top: 20px;
+    padding-top: 8px;
 }
 .signupform .container form .account{
     text-align: center;
