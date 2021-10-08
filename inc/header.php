@@ -166,6 +166,12 @@
                             <li><a href="#bestsale">best sales</a></li>
                             <li><a href="#">new collection</a></li>
                             <li><a href="#">offers</a></li>
+            <?php
+                $id = session::get("loginid");
+                $chkorder = $ct->checkordertbl($id);
+                if ($chkorder) { ?>
+                    <li><a href="orderdetails.php">Orders</a></li>
+            <?php } ?>
                         </ul>
                     </div>
                 </div>

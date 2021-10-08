@@ -4,6 +4,10 @@
             return date('F jS, Y, g:i a', strtotime($data));
         }
 
+        public function formatonlydate($data){
+            return date('M jS, Y', strtotime($data));
+        }
+
         public function textsort($text, $limit = 620){
             $text = $text. " ";
             $text = substr($text, 0, $limit);

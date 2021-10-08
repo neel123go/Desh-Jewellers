@@ -14,6 +14,15 @@
 
         <?php
             $id = session::get("loginid");
+            if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
+                $profileupdate = $cmr->cusproupdate($_POST, $id);
+            }
+            if (isset($profileupdate)) {
+                echo $profileupdate;
+            }
+        ?>
+
+        <?php
             $getuser = $cmr->getuserpro($id);
             if ($getuser) {
                 while ($value = $getuser->fetch_assoc()) {
@@ -23,38 +32,38 @@
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">Full Name</span>
-                        <input type="text" name="name" placeholder="<?php echo $value['name']; ?>" autocomplete="off"/>
+                        <input type="text" name="name" value="<?php echo $value['name']; ?>" autocomplete="off">
                     </div>
 
                     <div class="input-box">
                         <span class="details">Email Address</span>
-                        <input type="text" name="email" placeholder="<?php echo $value['email']; ?>" autocomplete="off"/>
+                        <input type="text" name="email" value="<?php echo $value['email']; ?>" autocomplete="off">
                     </div>
 
                     
 
                     <div class="input-box">
                         <span class="details">Phone Number</span>
-                        <input type="text" name="phone" placeholder="<?php echo '0'.$value['phone']; ?>" autocomplete="off"/>
+                        <input type="text" name="phone" value="<?php echo '0'.$value['phone']; ?>" autocomplete="off">
                     </div>
 
                     <div class="big-input-box">
                         <span class="details">Address</span>
-                        <input type="text" name="address" placeholder="<?php echo $value['address']; ?>" autocomplete="off"/>
+                        <input type="text" name="address" value="<?php echo $value['address']; ?>" autocomplete="off">
                     </div>
 
                     <div class="gender-details">
-                        <input type="radio" name="gender" value="Male" id="dot-1"<?php
+                        <input type="radio" name="gender" value="<?php echo $value['gender']; ?>" id="dot-1"<?php
                             if ($value['gender'] == 'Male') {
                                 echo "checked";
                             }
                         ?>>
-                        <input type="radio" name="gender" value="Female" id="dot-2"<?php
+                        <input type="radio" name="gender" value="<?php echo $value['gender']; ?>" id="dot-2"<?php
                             if ($value['gender'] == 'Female') {
                                 echo "checked";
                             }
                         ?>>
-                        <input type="radio" name="gender" value="Other" id="dot-3"<?php
+                        <input type="radio" name="gender" value="<?php echo $value['gender']; ?>" id="dot-3"<?php
                             if ($value['gender'] == 'Other') {
                                 echo "checked";
                             }
@@ -88,8 +97,8 @@
             ?>
                     <div class="button">
                         <input type="submit" name="update" value="Update">
-                        <input type="submit" name="change" value="Change Password">
-                        <a href="?logid=<?php echo session::get("loginid"); ?>">Logout</a>
+                        <a class="change" href="changepass.php?passid=<?php echo session::get("loginid"); ?>">Change Password</a>
+                        <a  onclick="return confirm('Are you sure to logout from this website ?')" class="logout" href="?logid=<?php echo session::get("loginid"); ?>">Logout</a>
                     </div>
                     
             </form>

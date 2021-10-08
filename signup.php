@@ -1,4 +1,10 @@
 <?php include 'inc/header.php'; ?>
+<?php
+    $login = session::get("login");
+    if ($login == ture) {
+        echo "<script>window.location = 'index.php'; </script>";
+    }
+?>
 
     <div class="signupform">
         <div class="container">

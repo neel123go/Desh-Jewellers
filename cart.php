@@ -1,5 +1,11 @@
 <?php include 'inc/header.php'; ?>
 <?php
+    $login = session::get("login");
+    if ($login == false) {
+        echo "<script>window.location = 'login.php'; </script>";
+    }
+?>
+<?php
     if (isset($_GET['delid'])) {
         $id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['delid']);
         $delcart = $ct->deletecart($id);
@@ -93,9 +99,13 @@
                         ?> Tk
                     </span>
                 </div>
+                <div class="checkout">
+                    <a href="order.php">Checkout</a>
+                </div>
             </div>
-        </div>
 
+        </div>
+        
     </div>
 
 <?php } else { ?>

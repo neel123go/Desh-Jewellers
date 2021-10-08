@@ -80,5 +80,79 @@
             $this->db->delete($query);
         }
 
+        public function getcusorder($id){
+            $sid = session_id();
+            $query = "SELECT * FROM tbl_cart WHERE sId = '$sid'";
+            $getpro = $this->db->select($query);
+            if ($getpro) {
+                while ($result = $getpro->fetch_assoc()) {
+                    $productId = $result['productId'];
+                    $productName = $result['productName'];
+                    $quantity = $result['quantity'];
+                    $price = $result['price'] * $quantity;
+                    $image = $result['image'];
+
+                    $insertquery = "INSERT INTO tbl_order(loginId, productId, productName, price, quantity, image) VALUES('$id', '$productId', '$productName', '$price', '$quantity', '$image')";
+                    $pdinsert = $this->db->insert($insertquery);
+                }
+            }
+        }
+
+        public function getorderpro($id){
+            $query = "SELECT * FROM tbl_order WHERE loginId = '$id' ORDER BY productId DESC";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+        public function checkordertbl($id){
+            $query = "SELECT * FROM tbl_order WHERE loginId = '$id'";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+        public function getallorderpro(){
+            $query = "SELECT * FROM tbl_order ORDER BY date DESC";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+        public function productshifted($id, $date, $price){
+            $id = $this->fr->validation($id);
+            $id = mysqli_real_escape_string($this->db->link, $id);
+
+            $date = $this->fr->validation($date);
+            $date = mysqli_real_escape_string($this->db->link, $date);
+
+            $price = $this->fr->validation($price);
+            $price = mysqli_real_escape_string($this->db->link, $price);
+
+            $query = "UPDATE tbl_order SET
+                status = '1'
+                WHERE loginId = '$id' AND date = '$date' AND price = '$price'";
+            $pdupdate = $this->db->update($query);
+        }
+
+        public function productdelete($id, $date, $price){
+            $query = "DELETE FROM tbl_order WHERE loginId = '$id' AND date = '$date' AND price = '$price'";
+            $this->db->delete($query);
+        }
+
+        public function productconfirm($id, $date, $price){
+            $id = $this->fr->validation($id);
+            $id = mysqli_real_escape_string($this->db->link, $id);
+
+            $date = $this->fr->validation($date);
+            $date = mysqli_real_escape_string($this->db->link, $date);
+
+            $price = $this->fr->validation($price);
+            $price = mysqli_real_escape_string($this->db->link, $price);
+
+            $query = "UPDATE tbl_order SET
+                status = '2'
+                WHERE loginId = '$id' AND date = '$date' AND price = '$price'";
+            $pdupdate = $this->db->update($query);
+        }
+
+
     }
 ?>
