@@ -1,4 +1,21 @@
 <?php include 'inc/header.php'; ?>
+<?php
+    if (isset($_GET['wishlistid'])) {
+        $wishid = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['wishlistid']);
+        $addtowishlist = $pd->addToWistlist($wishid);
+    }
+
+    if (isset($_GET['cartid'])) {
+        $cartid = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['cartid']);
+        $login = session::get("login");
+        if ($login == ture) {
+            $addtocartlist = $ct->addTocartonclick($cartid);
+        } else {
+            echo "<script>window.location = 'login.php'; </script>";
+        }
+        
+    }
+?>
 
     <!-- STRAT SLIDER PART -->
     <h2 class="slider-heading"><span>Explore</span> The New Arrivals</h2>
@@ -38,14 +55,14 @@
                     <div class="imgbox">
                         <img src="admin/<?php echo $result['image']; ?>" alt="">
                         <ul class="action">
-                            <a href="wishlist.php?proid=<?php echo $result['productId']; ?>">
+                            <a href="?wishlistid=<?php echo $result['productId']; ?>">
                                 <li>
                                     <i class="fa fa-heart" aria-hidden="true"></i>
                                     <span>Add to Wishlist</span>
                                 </li>
                             </a>
 
-                            <a href="cart.php?proid=<?php echo $result['productId']; ?>">
+                            <a href="?cartid=<?php echo $result['productId']; ?>">
                                 <li class="sec">
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     <span>Add to Cart</span>
@@ -118,13 +135,13 @@
                         </div>
 
                         <ul class="action">
-                            <a href="wishlist.php?proid=<?php echo $result['productId']; ?>">
+                            <a href="?wishlistid=<?php echo $result['productId']; ?>">
                                 <li>
                                     <i class="fa fa-heart" aria-hidden="true"></i>
                                 </li>
                             </a>
 
-                            <a href="cart.php?proid=<?php echo $result['productId']; ?>">
+                            <a href="?cartid=<?php echo $result['productId']; ?>">
                                 <li class="sec">
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 </li>
@@ -171,13 +188,13 @@
                         </div>
 
                         <ul class="action">
-                            <a href="wishlist.php?proid=<?php echo $result['productId']; ?>">
+                            <a href="?wishlistid=<?php echo $result['productId']; ?>">
                                 <li>
                                     <i class="fa fa-heart" aria-hidden="true"></i>
                                 </li>
                             </a>
 
-                            <a href="cart.php?proid=<?php echo $result['productId']; ?>">
+                            <a href="?cartid=<?php echo $result['productId']; ?>">
                                 <li class="sec">
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 </li>

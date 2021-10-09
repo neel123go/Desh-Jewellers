@@ -90,6 +90,9 @@ header .header{
     color: rgba(65, 64, 64, 0.466);
     font-size: 16px;
 }
+.header .header-top .search-area input[type="submit"]{
+    display: none;
+}
 .header .header-top .search-area i{
     font-size: 25px;
     margin-left: -30px;
@@ -1160,6 +1163,19 @@ footer .bottom .link a:last-child{
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+.pro-details-page .detail-r-sec .action-button a{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    background: #81aaec;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pro-details-page .detail-r-sec .action-button a:hover{
+    background: #74a2ec;
 }
 .pro-details-page .detail-r-sec .action-button input:hover{
     background: #74a2ec;

@@ -243,6 +243,59 @@
             
         }
 
+        public function addToWistlist($id){
+            $sid = session_id();
+            $chkquery = "SELECT * FROM tbl_wishlist WHERE productId = '$id' AND sId = '$sid'";
+            $check = $this->db->select($chkquery);
+            if ($check) {
+                $msg = "<span class='error'>This product is already added to wishlist !<span>";
+                return $msg;
+            }
+
+            $query = "SELECT * FROM tbl_product WHERE productId = '$id'";
+            $result = $this->db->select($query)->fetch_assoc();
+            if ($result) {
+                $productId = $result['productId'];
+                $productName = $result['productName'];
+                $price = $result['price'];
+                $image = $result['image'];
+
+                $catquery = "SELECT p.*, c.catName
+                        FROM tbl_product as p, tbl_main_category as c
+                        WHERE p.catId = c.catId AND p.productId = '$id'";
+                $result = $this->db->select($catquery)->fetch_assoc();
+                if ($result) {
+                    $catName = $result['catName'];
+                    $insertquery = "INSERT INTO tbl_wishlist(sId, productId, catName, productName, price, image) VALUES('$sid', '$id', '$catName', '$productName', '$price', '$image')";
+                    $pdinsert = $this->db->insert($insertquery);
+                    if ($pdinsert) {
+                        echo "<script>window.location = 'wishlist.php'; </script>";
+                    } else {
+                        echo "<script>window.location = '404.php'; </script>";
+                    }
+                }
+            }
+        }
+
+        public function getWishlist(){
+            $sid = session_id();
+            $query = "SELECT * FROM tbl_wishlist WHERE sId = '$sid'";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
+        public function delWistlist($wishid){
+            $sid = session_id();
+            $query = "DELETE FROM tbl_wishlist WHERE productId = '$wishid' AND sId = '$sid'";
+            $this->db->delete($query);
+        }
+
+        public function search($search){
+            $query = "SELECT * FROM tbl_product WHERE productName LIKE '%$search%' OR body LIKE '%$search%'";
+            $result = $this->db->select($query);
+            return $result;
+        }
+
 
     }
 ?>

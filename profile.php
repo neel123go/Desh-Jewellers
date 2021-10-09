@@ -98,7 +98,7 @@
                     <div class="button">
                         <input type="submit" name="update" value="Update">
                         <a class="change" href="changepass.php?passid=<?php echo session::get("loginid"); ?>">Change Password</a>
-                        <a  onclick="return confirm('Are you sure to logout from this website ?')" class="logout" href="?logid=<?php echo session::get("loginid"); ?>">Logout</a>
+                        <a onclick="return confirm('Are you sure to logout from this website ?')" class="logout" href="?logid=<?php echo session::get("loginid"); ?>">Logout</a>
                     </div>
                     
             </form>

@@ -6,10 +6,14 @@
         $id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['proid']);
     }
     
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cart'])) {
 		$quantity = $_POST['quantity'];
         $categoryName = $_POST['category'];
 		$addtocart = $ct->addTocart($quantity, $categoryName, $id);
+	}
+    
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['wishlist'])) {
+		$addtowishlist = $pd->addToWistlist($id);
 	}
 ?>
 
@@ -68,7 +72,8 @@
                 </div>
 
                 <div class="action-button">
-                    <input type="submit" value="Add to cart">
+                    <input type="submit" name="cart" value="Add to cart">
+                    <input type="submit" name="wishlist" value="Add to wishlist">
                 </div>
 
                 <span style="color:red; margin-top:20px; text-transform: none;">
@@ -76,10 +81,12 @@
                         if (isset($addtocart)) {
                             echo $addtocart;
                         }
+                        if (isset($addtowishlist)) {
+                            echo $addtowishlist;
+                        }
                     ?>
                 </span>
             </form>
-
         <?php } } ?>
 
         </div>

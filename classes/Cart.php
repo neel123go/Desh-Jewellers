@@ -31,7 +31,7 @@
             $chquery = "SELECT * FROM tbl_cart WHERE productId = '$productid' AND sId = '$sid'";
             $getsamepro = $this->db->select($chquery);
             if ($getsamepro) {
-                $msg = "This product is already added !";
+                $msg = "This product is already added to cart !";
                 return $msg;
             } else {
                 $query = "INSERT INTO tbl_cart(sId, productId, categoryName, productName, price, quantity, image) VALUES('$sid', '$productid', '$categoryName', '$productName', '$price', '$quantity', '$image')";
@@ -152,6 +152,45 @@
                 WHERE loginId = '$id' AND date = '$date' AND price = '$price'";
             $pdupdate = $this->db->update($query);
         }
+
+        public function addTocartonclick($cartid){
+            $catquery = "SELECT p.*, c.catName
+                    FROM tbl_product as p, tbl_main_category as c
+                    WHERE p.catId = c.catId AND p.productId = '$cartid'";
+            $result = $this->db->select($catquery)->fetch_assoc();
+            if ($result) {
+                $categoryName = $result['catName'];
+                $quantity = 1;
+                $productid = mysqli_real_escape_string($this->db->link, $cartid);
+                $sid = session_id();
+    
+                $squery = "SELECT * FROM tbl_product WHERE productId = '$productid'";
+                $result = $this->db->select($squery)->fetch_assoc();
+    
+                $productName = $result['productName'];
+                $price = $result['price'];
+                $image = $result['image'];
+    
+                $chquery = "SELECT * FROM tbl_cart WHERE productId = '$productid' AND sId = '$sid'";
+                $getsamepro = $this->db->select($chquery);
+                if ($getsamepro) {
+                    echo "<script>window.location = 'cart.php'; </script>";
+                } else {
+                    $query = "INSERT INTO tbl_cart(sId, productId, categoryName, productName, price, quantity, image) VALUES('$sid', '$productid', '$categoryName', '$productName', '$price', '$quantity', '$image')";
+    
+                    $pdinsert = $this->db->insert($query);
+                    if ($pdinsert) {
+                        echo "<script>window.location = 'cart.php'; </script>";
+                    } else {
+                        echo "<script>window.location = '404.php'; </script>";
+                    }
+                }
+            }
+        }
+
+
+
+
 
 
     }

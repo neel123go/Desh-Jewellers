@@ -57,16 +57,28 @@
                     </div>
                 </a>
 
-                <div class="search-area">
-                    <input type="text" placeholder="Search entier store here..">
-                    <i class="fa fa-search"></i>
-                </div>
+                <form action="search.php" method="get">
+                    <div class="search-area">
+                        <input type="text" name="search" autocomplete="off" placeholder="Search entier store here..">
+                        <input type="submit" name="submit" value="search">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </form>
 
                 <div class="icon">
                     <a href="wishlist.php">
                         <div class="wishlist">
                             <i class="fa fa-heart-o"></i>
-                            <small>(0)</small>
+                            <small>(<?php
+                                    $getdata = $pd->getWishlist();
+                                    if ($getdata) {
+                                        $wishnum = session::get("num");
+                                        echo $wishnum;
+                                    } else {
+                                        echo "0";
+                                    }
+                                    
+                                ?>)</small>
                             <p> wishlist</p>
                         </div>
                     </a>
